@@ -57,3 +57,25 @@ main
 img
 	max-width 100%
 
+
+.title-bordered
+	position relative
+	margin-bottom 20px
+	text-align center
+	h2
+		background #fff
+		padding 0 2px
+		position relative
+		z-index 2
+		display inline-block
+
+	&:after
+		content ''
+		border-bottom  1px solid #000
+		display block
+		position relative
+		z-index 1
+		top: -5px;
+		height: 1px;
+
+
