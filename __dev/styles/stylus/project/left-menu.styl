@@ -1,0 +1,43 @@
+.left-menu
+	width 140px
+	float left
+	position relative
+	margin-bottom 40px
+	border-box()
+	padding-right 20px
+	&-category
+		text-transform uppercase
+		color: #c0c6cd;
+		font-weight: 700
+		font-size 15px
+		margin-bottom 40px
+	&-item
+		margin-bottom 12px
+		font-size 15px
+		& + .left-menu-category
+			margin-top 55px
+	&-link
+		text-underline none
+		&:hover
+			.left-menu-name
+				color #2fb38c
+			.left-menu-count
+				color #565658
+	&-name
+		white-space nowrap
+		text-overflow ellipsis
+		line-height: normal;
+		overflow hidden
+		max-width 85px
+		margin-right 5px
+		color #535561
+		text-align right
+		vertical-align middle
+		display inline-block
+		trans()
+	&-count
+		color #c6c7cb
+		display inline-block
+		vertical-align middle
+		trans()
+
