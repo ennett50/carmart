@@ -1,0 +1,187 @@
+.header
+	position relative
+
+	&-line
+		background #10aa8b
+		color #fff;
+		min-width: 1000px;
+		font-size 12px
+		margin-bottom 25px
+	&-ctn
+		text-align: justify;
+		&:after
+			content: '';
+			width: 100%;
+			display: inline-block;
+	&-change-city
+		display inline-block
+		vertical-align middle
+		margin-right 15px
+		padding 10px 15px 10px 10px
+		border-radius 5px
+		trans()
+		color #fff
+		position relative
+		cursor pointer
+		&:hover
+			background #40bba2
+		&:after
+			content ''
+			display block
+			position: absolute;
+			right: 5px;
+			top: 50%;
+			margin-top: -1px;
+			sprite($s-arrow-down);
+		span
+			border-bottom 1px dotted #fff
+
+	&-search
+		display inline-block
+		vertical-align middle
+		margin 0 10px
+		padding 10px
+		trans()
+		border-radius 5px
+		cursor pointer
+		&:after
+			content ''
+			display block
+			sprite($s-icon-search)
+		&:hover
+			background #40bba2
+
+	&-nav
+		display inline-block
+		vertical-align middle
+		margin  0 10px
+		&-item
+			display inline-block
+			padding 12px 10px
+			border-radius 5px
+			color #fff
+			text-decoration none
+			font-size 12px
+			&:hover, &.__active
+				background #40bba2
+
+	&-person
+		display inline-block
+		vertical-align middle
+		margin 0 5px;
+		&-basket
+			padding 10px 5px
+			display inline-block
+			vertical-align middle
+			margin-right 10px
+			border-radius 5px
+			&:hover, &.__active
+				background #40bba2
+			&:after
+				content ''
+				display block
+				sprite($s-icon-basket)
+		&-link
+			font-size 12px
+			color #fff
+			display inline-block
+			vertical-align middle
+			border-radius 5px
+			padding 10px 5px
+			text-decoration none
+			&:hover, &.__active
+				background #40bba2
+		&-sep
+			display: inline-block;
+			vertical-align: middle;
+			color: #fff;
+			font-weight: 700;
+			padding: 0 2px;
+			position: relative;
+			top: -3px;
+
+	&-bank
+		display inline-block
+		vertical-align middle
+		color #fff
+		text-transform uppercase
+		font-size 8px
+		font-family: 'Open Sans', sans-serif;
+		text-decoration none
+		&:hover
+			&:before
+				sprite($s-icon-bank-hover)
+		&:before
+			content ''
+			display block
+			sprite($s-icon-bank)
+			margin-bottom 4px
+	&-info
+		position relative
+		margin-bottom 40px
+		&-ctn
+			text-align justify
+			&:after
+				content: '';
+				width: 100%;
+				display: inline-block;
+		&-links
+			display inline-block
+			vertical-align middle
+			margin 0 10px
+			.header-info-nav
+				font-weight normal
+		&-nav
+			display inline-block
+			vertical-align middle
+			margin-right 40px
+			text-transform uppercase
+			font-size 14px
+			text-decoration none
+			font-weight bold
+			color #505a68
+			margin-top: 15px;
+			&.icon-new-car, &.icon-old-car
+				&:before
+					content ''
+					position relative
+					top -2px
+					display inline-block
+					vertical-align middle
+					margin-right 8px
+			&.icon-new-car
+				&:hover
+					&:before
+						sprite($s-icon-new-car-hover)
+				&:before
+					sprite($s-icon-new-car)
+			&.icon-old-car
+				&:hover
+					&:before
+						sprite($s-icon-old-car-hover)
+				&:before
+					sprite($s-icon-old-car)
+			&:hover, &.__active
+				color #07aa8a
+	&-logo
+		display inline-block
+		vertical-align middle
+		margin-right 30px
+		font-size 11px
+		color #848d9a
+		font-weight lighter
+		&-slogan
+			display block
+			margin-bottom 5px
+			letter-spacing: -0.5px;
+	&-phone
+		display inline-block
+		vertical-align middle
+		border-bottom 1px dotted #535a66
+		color #535a66
+		text-decoration none
+		margin-top 15px
+
+		&:hover
+			color #07aa8a
+			border-color #07aa8a

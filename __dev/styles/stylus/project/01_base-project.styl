@@ -1,8 +1,9 @@
 body
 	background transparent
-
+	border-box()
 main
 	position relative
+
 
 .wrapper-content
 	clear()
@@ -37,6 +38,28 @@ main
 		border-color #e64d00
 		color #fff
 
+	&-info
+		text-decoration: none;
+		text-align: center;
+		display: inline-block;
+		outline 0;
+		border: 0
+		cursor pointer
+		vertical-align middle
+		border-box()
+		font-size 12px
+		font-weight 700
+		padding: 0 14px;
+		line-height 33px
+		height 30px
+		background: #fff;
+		color: #848d9a;
+		border-radius 5px
+		text-transform uppercase
+		trans()
+		&:hover
+			color #07aa8a
+
 .falseLink
 	display inline
 	border-bottom 1px dashed #c02a1b
@@ -56,8 +79,6 @@ main
 
 img
 	max-width 100%
-
-
 .title-bordered
 	position relative
 	margin-bottom 20px
@@ -83,3 +104,27 @@ img
 		z-index 1
 		top: -7px;
 		height: 1px;
+a
+	trans();
+
+.clear
+	clear()
+
+.link-more
+	color #545861
+	text-decoration none
+	border-bottom 1px dotted #545861
+	cursor pointer
+	display inline-block
+	trans()
+	&:hover
+		color #07aa8a
+		border-color #07aa8a
+
+.right-column
+	width 100%
+	margin-left -140px
+	position relative
+	float right
+	.content
+		margin-left 140px
