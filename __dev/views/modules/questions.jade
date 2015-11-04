@@ -1,24 +1,23 @@
-div(style="max-width:1191px")
-    .questions
-        .title-bordered
-            h2 Какой автомобиль Вам подходит?
-        .questions-title Вы хотите добираться до дома быстрее?
-        .questions-reply
-            -var type_questions  = ['Первый ответ','Второй ответ','Третий ответ'];
-            -for (var i=0;i<type_questions.length;i++)
-                a(href="#").questions-btn= type_questions[i]
-        .questions-icon
-        .questions-result
-            ul.questions-result-ctn
-                -for (var i=0;i<3;i++)
-                    li.questions-result-item
-                        .questions-result-img
-                            img(src="images/example/questions_car.png", alt=" ")
-                            .questions-result-overlay
-                                .questions-result-date 04 ноября 2015
-                                .questions-result-views 9999
-                                .questions-result-title FORD EXPLORER 2016
-                                .questions-result-subtitle Уже в Carmart
+.questions
+    .title-bordered
+        h2 Какой автомобиль Вам подходит?
+    .questions-title Вы хотите добираться до дома быстрее?
+    .questions-reply
+        -var type_questions  = ['Первый ответ','Второй ответ','Третий ответ'];
+        -for (var i=0;i<type_questions.length;i++)
+            a(href="#").questions-btn= type_questions[i]
+    .questions-icon
+    .questions-result
+        ul.questions-result-ctn
+            -for (var i=0;i<3;i++)
+                li.questions-result-item
+                    a(href="#").questions-result-img
+                        img(src="images/example/questions_car.png", alt=" ")
+                        .questions-result-overlay
+                            .questions-result-date 04 ноября 2015
+                            .questions-result-views 9999
+                            .questions-result-title FORD EXPLORER 2016
+                            .questions-result-subtitle Уже в Carmart
 
 
 

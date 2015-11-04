@@ -1,0 +1,13 @@
+.friends
+   .title-bordered
+      h2 Наши друзья
+   .friends-list
+      ul
+         -for (var v=0;v<4;v++)
+            -for (var i=1;i<4;i++)
+               li.friends-item
+                  img(src="images/example/bank/#{i}.png", alt="").friends-img
+         li.friends-item
+            img(src="images/example/bank/1.png", alt="").friends-img
+
+      a.link-more.mv-50(href="#") Ещё больше друзей
