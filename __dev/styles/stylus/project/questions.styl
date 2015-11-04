@@ -1,2 +1,108 @@
-.__test
-	font-size 24px
+.questions
+	position relative
+	margin-bottom 20px
+	&-reply
+		position relative
+		margin:0 0 50px 0
+		text-align center
+	&-title
+		color: #4f5a67;
+		font-size: 1.125em;
+		font-style: italic;
+		text-align: center;
+		margin-bottom 80 px
+		&:before,&:after
+			content: '//'
+			color: #B4B8BC
+			font-size: 1em
+	&-btn
+		border-radius: 5px
+		border: 2px solid #00ac8b
+		background-color: #fff
+		text-decoration none
+		color #4f5a67
+		width: 200px
+		height: 40px
+		line-height 40px
+		text-align: center
+		display: inline-block
+		margin: 0 10px
+		text-transform uppercase
+		font-size 14px
+		font-weight 700
+		trans()
+		&:hover, &.__active
+			background #00ac8b
+			color #fff
+		&.__active
+			cursor default
+
+	&-icon
+		sprite($s-icon-questions)
+		margin 0 auto 90px
+	&-result
+		width 100%
+		clear: both;
+		position relative
+		overflow hidden
+		&:after
+			content: '';
+			display: table;
+			clear: both;
+		&-ctn
+			margin-right -25px
+			margin-bottom 20px
+		&-img
+			position relative
+			text-align center
+		&-item
+			//width 33.33%
+			max-width: 505px;
+			margin-right: 25px;
+			border-box()
+			//margin-right 25px
+			position relative
+			display: table-cell;
+			padding-right: 25px;
+
+		&-overlay
+			padding: 20px;
+			text-align left
+			position absolute
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			border-radius: 5px;
+			background-color: rgba(79, 90, 103, 0.9);
+			border-box()
+		&-title
+			color #fff
+			font-weight: 500;
+			line-height: 1.2;
+			text-transform: uppercase;
+			_text-overflow(100%)
+		&-date
+			color: #c0c6cd;
+			font-size 13px
+			padding-bottom: 12px;
+			display: inline-block;
+		&-subtitle
+			color #fff
+			font-weight: 300
+			_text-overflow(100%)
+		&-views
+			color: #c0c6cd;
+			font-size: 13px
+			font-weight: 300;
+			line-height: 1.5;
+			display: inline-block;
+			text-align: right;
+			position absolute
+			top 20px
+			right 20px
+			&:before
+				content:''
+				sprite($s-icon-watch)
+				display inline-block
+				margin-right 10px
+
