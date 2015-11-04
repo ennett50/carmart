@@ -1,0 +1,31 @@
+.main-search
+	position absolute
+	width 690px
+	left 50%
+	margin-left -345px
+	bottom: 92px;
+	&:before
+		content: '';
+		width: 0;
+		height: 0;
+		border-bottom: 55px solid #ffffff;
+		border-left: 11px solid transparent;
+		position: absolute;
+		top: 0;
+		left: -11px;
+	&:after
+		content: '';
+		width: 0;
+		height: 0;
+		border-top: 55px solid #ffffff;
+		border-right: 11px solid transparent;
+		position: absolute;
+		top: 0;
+		right: -11px;
+	&-text
+		text-transform uppercase
+		font-size 18px
+		border-box()
+		width 100%
+		padding 17px 10px 16px
+		line-height normal

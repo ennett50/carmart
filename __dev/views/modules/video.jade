@@ -1,9 +1,21 @@
 div.main-video
 	div.main-video-info
-		div.main-video-title
+		div.main-video-title Смотрите
+		div.main-video-description Как купить автомобиль в интернет-магазине Кармарт
+		div.main-video-icon.icon-reliability
+		div.main-video-icon.icon-online
+		div.main-video-icon.icon-free
+		div.main-video-icon.icon-buy
+		div.main-video-icon.icon-pay
+		div.main-video-icon.icon-car
 
 	div.main-video-file
 		object(type='application/x-shockwave-flash', data='images/player/player_flv_multi.swf', width='1081', height='540')
 			param(name='movie', value='images/player/player_flv_multi.swf')
 			param(name='allowFullScreen', value='true')
 			param(name='FlashVars', value='flv=video_test.flv&startimage=images/video-default.png&width=1081&height=540&volume=200&autonext=0&margin=0&bgcolor1=ffffff&bgcolor2=ffffff&showstop=1&showvolume=1&showopen=0&showplayer=never&showfullscreen=1&playercolor=10aa8b&loadingcolor=ffffff&buttonovercolor=396159&slidercolor1=ffffff&slidercolor2=ffffff&sliderovercolor=396159&buffermessage=Загружается _n_&ondoubleclick=fullscreen&iconplaybgcolor=ffffff&videobgcolor=ffffff')
+	div.main-search
+		form(method="" action="")
+			input(type="search" placeholder="Найди машину своей мечты").main-search-text
+			input(type="submit" value="").main-search-btn
+
