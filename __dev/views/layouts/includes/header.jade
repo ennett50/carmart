@@ -1,4 +1,53 @@
 header.header
-	div.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
-		.container
-				a.navbar-brand(href='index.html') На разводящую страницу
+	div.header-line
+		div.wrapper-content.clearfix.header-ctn
+
+			div.header-change-city
+				span Санкт-Петербург
+			div.button-info Доставим бесплатно
+
+			-var headerMenu = ['О carmart', 'Как это работает','Гарантии','Оплата','Почему наши цены ниже']
+			nav.header-nav
+				-for (var i=0;i<headerMenu.length;i++)
+					a(href="#").header-nav-item= headerMenu[i]
+					!="\n"
+
+
+			div.header-search
+
+			div.header-person
+				a(href="#").header-person-basket
+				!="\n"
+				a(href="#").header-person-link Вход
+				!="\n"
+				span.header-person-sep .
+				!="\n"
+				a(href="#").header-person-link Регистрация
+				!="\n"
+
+
+			a(href="#").header-bank
+				span Без комиссии
+
+
+	//Мультисервис Максимум для Вас!
+	div.header-info
+		div.wrapper-content.header-info-ctn
+			if (currentPageTitle == 'Главная страница')
+				div.header-logo
+					span.header-logo-slogan Первый интернет-магазин автомобилей
+					img(src="images/logo.png" alt="")
+
+			else
+				a(href="#").header-logo
+					span.header-logo-slogan Первый интернет-магазин автомобилей
+					img(src="images/logo.png" alt="")
+
+			a(href="#").header-info-nav.icon-new-car Купить новый автомобиль
+			a(href="#").header-info-nav.icon-old-car Купить автомобиль с пробегом
+
+			div.header-info-links
+				a(href="#").header-info-nav История покупок
+				a(href="#").header-info-nav Как оформить заказ
+
+			a(href="tel:88003000600").header-phone 8-800-3000600

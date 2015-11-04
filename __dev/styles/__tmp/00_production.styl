@@ -1,211 +1,9 @@
-$wrapper_width = 1192px
-$img_path = '../images/'
-
-$type_anim_link = 2
-
-
-
-base-font()
-	font-family: 'Roboto', sans-serif;
-	font-size 14px
-	color #535a66
-content-center(w = 100%, h = w, important = false )
-	important = (important == true ? !important : )
-	position relative
-	width w important
-	height h important
-
-	> *
-		position absolute
-		top 0 important
-		bottom 0 important
-		left 0 important
-		right 0 important
-		margin auto important
-		max-height 100%
-		max-width 100%
-size(w, h = w)
-	width w
-	height h
-	
-border-box()
-	box-sizing padding-box
-	box-sizing border-box
-	
-background-clip()
-	background-clip padding-box
-
-
-// in css -> images("test.png")
-images(file)
-	url( $img_path + file )
-	
-trans()
-	transition all 0.2s
-
-trans-none()
-	transition all 0s
-clear()
-	&:after
-		content ''
-		display table
-		clear both
-
-// in css -> columns(5)
-columns(count)
-	.column-{count}
-		width floor( (95% / count), 1 )
-		display inline-block
-		vertical-align top
-
-// in css -> width-perc(15)
-width-perc(perc)
-	.perc-{perc}
-		width: (perc)%
-		
-anim-link(type = $type_anim_link)
-	position relative
-	text-decoration none !important
-	overflow hidden
-	
-	if( type == 1)
-		&:after
-			content ''
-			display block
-			position absolute
-			bottom 0
-			left 0
-			size(100%, 0)
-			max-width 100%
-			border-bottom 1px solid
-			trans()
-			
-		&:hover
-			&:after
-				size(0)
-		
-	if (type == 2)
-		&:after,
-		&:before
-			content ''
-			display block
-			position absolute
-			bottom 0
-			size(50%, 0)
-			max-width 50%
-			border-bottom 1px solid
-			trans()
-		&:after
-			right 0
-		&:before
-			left 0
-			
-		&:hover
-			text-decoration none
-			&:after,
-			&:before
-				size(0)
-	
-	if( type == 3)
-		&:after
-			content ''
-			display block
-			position absolute
-			bottom 0
-			left 0
-			right 0
-			margin auto
-			size(100%, 0)
-			max-width 100%
-			border-bottom 1px solid
-			trans()
-			
-		&:hover
-			&:after
-				size(0)
-
-// in css -> blur(20)
-blur(px)
-	filter unquote('progid:DXImageTransform.Microsoft.Blur(PixelRadius="' + px + '")')
-	-webkit-filter unquote('blur(' + px + 'px)')
-	-o-filter unquote('blur(' + px + 'px)')
-	-ms-filter unquote('blur(' + px + 'px)')
-	-moz-filter unquote('blur(' + px + 'px)')
-	filter unquote('blur(' + px + 'px)')
-
-// in css -> opacity(0.2) or  opacity(20)
-opacity(val)
-	if val > 1
-		val = val/100
-	opacity val
-	zoom 1
-	-ms-filter unquote('progid:DXImageTransform.Microsoft.Alpha(Opacity="' + val*100 + '")')
-
-
-// in css -> background-size(cover)
-background-size(value)
-	background-size value
-
-
-// in css with inset -> box-shadow-inset(0, 0, 10px, rgba(0,0,0,0.5))
-// in css  -> box-shadow(0, 0, 10px, rgba(0,0,0,0.5))
-box-shadow-inset(x, y, r, color)
-	box-shadow inset x y r color
-
-box-shadow-outer( x, y, r, color)
-	box-shadow x y r color
-
-
-// in css with inset -> text-shadow(5px, 1px, 5px, #000)
-text-shadow(x, y, r, color)
-	text-shadow x y r color
-
-// in css with inset -> gradient-linear(#000, #fff)
-gradient-linear(top, bottom)
-	background linear-gradient(top, bottom)
-
-// in css -> text-ellipsis(100px) or text-ellipsis(80%)
-_text-overflow(width_value = 'none')
-	white-space nowrap
-	text-overflow ellipsis
-	line-height: normal;
-	overflow hidden
-	if width_value != 'none'
-		width width_value
-
-
-// sprite mixin
-
-spriteWidth($sprite)
-	width $sprite[4]
-
-spriteHeight($sprite)
-	height $sprite[5]
-
-spritePosition($sprite)
-	background-position $sprite[2] $sprite[3]
-
-spriteImage($sprite)
-	background-image url(../images/$sprite[8])
-
-sprite($sprite)
-	if !match('hover', selector()) && !match('active', selector())
-		spriteImage($sprite)
-	spritePosition($sprite)
-	spriteWidth($sprite)
-	spriteHeight($sprite)
-
-    $s-butter-2x = 85px 0px -85px 0px 52px 41px 137px 125px 'sprite.png';
-    $s-butter = 85px 46px -85px -46px 26px 21px 137px 125px 'sprite.png';
-    $s-cart-2x = 0px 0px 0px 0px 80px 80px 137px 125px 'sprite.png';
-    $s-cart = 0px 85px 0px -85px 40px 40px 137px 125px 'sprite.png';
-    $s-phone = 45px 85px -45px -85px 40px 40px 137px 125px 'sprite.png';
-
 body
 	background transparent
 
 main
 	position relative
+
 
 .wrapper-content
 	clear()
@@ -240,6 +38,28 @@ main
 		border-color #e64d00
 		color #fff
 
+	&-info
+		text-decoration: none;
+		text-align: center;
+		display: inline-block;
+		outline 0;
+		border: 0
+		cursor pointer
+		vertical-align middle
+		border-box()
+		font-size 12px
+		font-weight 700
+		padding: 0 14px;
+		line-height 33px
+		height 30px
+		background: #fff;
+		color: #848d9a;
+		border-radius 5px
+		text-transform uppercase
+		trans()
+		&:hover
+			color #07aa8a
+
 .falseLink
 	display inline
 	border-bottom 1px dashed #c02a1b
@@ -260,18 +80,18 @@ main
 img
 	max-width 100%
 
-
+a
+	trans();
 
 
 //Типографика для "текстовых страниц сайта"
 
 
 
-.icon-basket
+.arrow-down
 	position relative
-	sprite($s-phone);
-	&:hover
-		sprite($s-phone-2x);
+	sprite($s-arrow-down);
+
 
 
 
@@ -433,10 +253,449 @@ img
 .breadcrumbs
 	position relative
 	margin-bottom 20px
+.footer
+	background #4f5a67
+	padding: 80px 0 22px;
+	min-width 1000px
+	color #818b98
+	height: 392px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	border-box()
+	a
+		color #818b98
+		&:hover
+			color #fff
+	&-line
+		text-align: justify;
+		position relative
+		&:after
+			content: '';
+			display: inline-block;
+			width: 100%;
 
+	&-logo
+		display inline-block
+		vertical-align top
+		margin-right 20px
+	&-nav
+		&-ctn
+			margin-bottom 68px
+			display inline-block
+			vertical-align top
+			color #a6adb5
+			position relative
+		&-item
+			margin-bottom 10px
+			font-size 15px
+			color #a6adb5
+		&-link
+			text-decoration none
+			&:hover, &.__active
+				color #fff
+	&-links
+		font-size 10px
+		line-height: 12px;
+
+.header
+	position relative
+
+	&-line
+		background #10aa8b
+		color #fff;
+		min-width: 1000px;
+		font-size 12px
+		margin-bottom 25px
+	&-ctn
+		text-align: justify;
+		&:after
+			content: '';
+			width: 100%;
+			display: inline-block;
+	&-change-city
+		display inline-block
+		vertical-align middle
+		margin-right 15px
+		padding 10px 15px 10px 10px
+		border-radius 5px
+		trans()
+		color #fff
+		position relative
+		cursor pointer
+		&:hover
+			background #40bba2
+		&:after
+			content ''
+			display block
+			position: absolute;
+			right: 5px;
+			top: 50%;
+			margin-top: -1px;
+			sprite($s-arrow-down);
+		span
+			border-bottom 1px dotted #fff
+
+	&-search
+		display inline-block
+		vertical-align middle
+		margin 0 10px
+		padding 10px
+		trans()
+		border-radius 5px
+		cursor pointer
+		&:after
+			content ''
+			display block
+			sprite($s-icon-search)
+		&:hover
+			background #40bba2
+
+	&-nav
+		display inline-block
+		vertical-align middle
+		margin  0 10px
+		&-item
+			display inline-block
+			padding 12px 10px
+			border-radius 5px
+			color #fff
+			text-decoration none
+			font-size 12px
+			&:hover, &.__active
+				background #40bba2
+
+	&-person
+		display inline-block
+		vertical-align middle
+		margin 0 5px;
+		&-basket
+			padding 10px 5px
+			display inline-block
+			vertical-align middle
+			margin-right 10px
+			border-radius 5px
+			&:hover, &.__active
+				background #40bba2
+			&:after
+				content ''
+				display block
+				sprite($s-icon-basket)
+		&-link
+			font-size 12px
+			color #fff
+			display inline-block
+			vertical-align middle
+			border-radius 5px
+			padding 10px 5px
+			text-decoration none
+			&:hover, &.__active
+				background #40bba2
+		&-sep
+			display: inline-block;
+			vertical-align: middle;
+			color: #fff;
+			font-weight: 700;
+			padding: 0 2px;
+			position: relative;
+			top: -3px;
+
+	&-bank
+		display inline-block
+		vertical-align middle
+		color #fff
+		text-transform uppercase
+		font-size 8px
+		font-family: 'Open Sans', sans-serif;
+		text-decoration none
+		&:hover
+			&:before
+				sprite($s-icon-bank-hover)
+		&:before
+			content ''
+			display block
+			sprite($s-icon-bank)
+			margin-bottom 4px
+	&-info
+		position relative
+		margin-bottom 40px
+		&-ctn
+			text-align justify
+			&:after
+				content: '';
+				width: 100%;
+				display: inline-block;
+		&-links
+			display inline-block
+			vertical-align middle
+			margin 0 10px
+			.header-info-nav
+				font-weight normal
+		&-nav
+			display inline-block
+			vertical-align middle
+			margin-right 40px
+			text-transform uppercase
+			font-size 14px
+			text-decoration none
+			font-weight bold
+			color #505a68
+			margin-top: 15px;
+			&.icon-new-car, &.icon-old-car
+				&:before
+					content ''
+					position relative
+					top -2px
+					display inline-block
+					vertical-align middle
+					margin-right 8px
+			&.icon-new-car
+				&:hover
+					&:before
+						sprite($s-icon-new-car-hover)
+				&:before
+					sprite($s-icon-new-car)
+			&.icon-old-car
+				&:hover
+					&:before
+						sprite($s-icon-old-car-hover)
+				&:before
+					sprite($s-icon-old-car)
+			&:hover, &.__active
+				color #07aa8a
+	&-logo
+		display inline-block
+		vertical-align middle
+		margin-right 30px
+		font-size 11px
+		color #848d9a
+		font-weight lighter
+		&-slogan
+			display block
+			margin-bottom 5px
+			letter-spacing: -0.5px;
+	&-phone
+		display inline-block
+		vertical-align middle
+		border-bottom 1px dotted #535a66
+		color #535a66
+		text-decoration none
+		margin-top 15px
+
+		&:hover
+			color #07aa8a
+			border-color #07aa8a
 
 .pagination
 	position relative
 	margin 0
 .__test
 	font-size 24px
+$wrapper_width = 1192px
+$img_path = '../images/'
+
+$type_anim_link = 2
+
+
+
+base-font()
+	font-family: 'Roboto', sans-serif;
+	font-size 14px
+	color #535a66
+content-center(w = 100%, h = w, important = false )
+	important = (important == true ? !important : )
+	position relative
+	width w important
+	height h important
+
+	> *
+		position absolute
+		top 0 important
+		bottom 0 important
+		left 0 important
+		right 0 important
+		margin auto important
+		max-height 100%
+		max-width 100%
+size(w, h = w)
+	width w
+	height h
+	
+border-box()
+	box-sizing padding-box
+	box-sizing border-box
+	
+background-clip()
+	background-clip padding-box
+
+
+// in css -> images("test.png")
+images(file)
+	url( $img_path + file )
+	
+trans()
+	transition all 0.3s
+
+trans-none()
+	transition all 0s
+clear()
+	&:after
+		content ''
+		display table
+		clear both
+
+// in css -> columns(5)
+columns(count)
+	.column-{count}
+		width floor( (95% / count), 1 )
+		display inline-block
+		vertical-align top
+
+// in css -> width-perc(15)
+width-perc(perc)
+	.perc-{perc}
+		width: (perc)%
+		
+anim-link(type = $type_anim_link)
+	position relative
+	text-decoration none !important
+	overflow hidden
+	
+	if( type == 1)
+		&:after
+			content ''
+			display block
+			position absolute
+			bottom 0
+			left 0
+			size(100%, 0)
+			max-width 100%
+			border-bottom 1px solid
+			trans()
+			
+		&:hover
+			&:after
+				size(0)
+		
+	if (type == 2)
+		&:after,
+		&:before
+			content ''
+			display block
+			position absolute
+			bottom 0
+			size(50%, 0)
+			max-width 50%
+			border-bottom 1px solid
+			trans()
+		&:after
+			right 0
+		&:before
+			left 0
+			
+		&:hover
+			text-decoration none
+			&:after,
+			&:before
+				size(0)
+	
+	if( type == 3)
+		&:after
+			content ''
+			display block
+			position absolute
+			bottom 0
+			left 0
+			right 0
+			margin auto
+			size(100%, 0)
+			max-width 100%
+			border-bottom 1px solid
+			trans()
+			
+		&:hover
+			&:after
+				size(0)
+
+// in css -> blur(20)
+blur(px)
+	filter unquote('progid:DXImageTransform.Microsoft.Blur(PixelRadius="' + px + '")')
+	-webkit-filter unquote('blur(' + px + 'px)')
+	-o-filter unquote('blur(' + px + 'px)')
+	-ms-filter unquote('blur(' + px + 'px)')
+	-moz-filter unquote('blur(' + px + 'px)')
+	filter unquote('blur(' + px + 'px)')
+
+// in css -> opacity(0.2) or  opacity(20)
+opacity(val)
+	if val > 1
+		val = val/100
+	opacity val
+	zoom 1
+	-ms-filter unquote('progid:DXImageTransform.Microsoft.Alpha(Opacity="' + val*100 + '")')
+
+
+// in css -> background-size(cover)
+background-size(value)
+	background-size value
+
+
+// in css with inset -> box-shadow-inset(0, 0, 10px, rgba(0,0,0,0.5))
+// in css  -> box-shadow(0, 0, 10px, rgba(0,0,0,0.5))
+box-shadow-inset(x, y, r, color)
+	box-shadow inset x y r color
+
+box-shadow-outer( x, y, r, color)
+	box-shadow x y r color
+
+
+// in css with inset -> text-shadow(5px, 1px, 5px, #000)
+text-shadow(x, y, r, color)
+	text-shadow x y r color
+
+// in css with inset -> gradient-linear(#000, #fff)
+gradient-linear(top, bottom)
+	background linear-gradient(top, bottom)
+
+// in css -> text-ellipsis(100px) or text-ellipsis(80%)
+_text-overflow(width_value = 'none')
+	white-space nowrap
+	text-overflow ellipsis
+	line-height: normal;
+	overflow hidden
+	if width_value != 'none'
+		width width_value
+
+
+// sprite mixin
+
+spriteWidth($sprite)
+	width $sprite[4]
+
+spriteHeight($sprite)
+	height $sprite[5]
+
+spritePosition($sprite)
+	background-position $sprite[2] $sprite[3]
+
+spriteImage($sprite)
+	background-image url(../images/$sprite[8])
+
+sprite($sprite)
+	if !match('hover', selector()) && !match('active', selector())
+		spriteImage($sprite)
+	spritePosition($sprite)
+	spriteWidth($sprite)
+	spriteHeight($sprite)
+
+    $s-arrow-down = 68px 53px -68px -53px 5px 3px 98px 78px 'sprite.png';
+    $s-icon-bank-hover = 0px 0px 0px 0px 63px 13px 98px 78px 'sprite.png';
+    $s-icon-bank = 0px 18px 0px -18px 63px 13px 98px 78px 'sprite.png';
+    $s-icon-basket = 0px 63px 0px -63px 19px 15px 98px 78px 'sprite.png';
+    $s-icon-new-car-hover = 68px 27px -68px -27px 25px 21px 98px 78px 'sprite.png';
+    $s-icon-new-car = 35px 36px -35px -36px 25px 21px 98px 78px 'sprite.png';
+    $s-icon-old-car-hover = 0px 36px 0px -36px 30px 22px 98px 78px 'sprite.png';
+    $s-icon-old-car = 68px 0px -68px 0px 30px 22px 98px 78px 'sprite.png';
+    $s-icon-search = 24px 63px -24px -63px 12px 15px 98px 78px 'sprite.png';

@@ -7,9 +7,12 @@ html(lang="ru").no-js
 	body
 		include includes/header
 		div.wrapper-content
-			block block-content
+			include ../modules/left-menu
+			div.right-column
+				div.content
+					block block-content
 
 
 		include includes/footer
 
-		include ../modules/popups.jade
+		//include ../modules/popups.jade

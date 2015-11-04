@@ -1,2 +1,74 @@
 footer.footer
-    div.container © 2015
+	div.wrapper-content
+		div.footer-line
+			if (currentPageTitle == 'Главная страница')
+				div.footer-logo
+					img(src="images/logo-footer.png" alt="")
+			else
+				a(href="#").footer-logo
+					img(src="images/logo-footer.png" alt="")
+
+			//-div.footer-nav
+			ul.footer-nav-ctn
+				li.footer-nav-item
+					a(href="#").footer-nav-link Новые автомобили
+				li.footer-nav-item
+					a(href="#").footer-nav-link Автомобили с пробегом
+				li.footer-nav-item
+					a(href="#").footer-nav-link Истории покупателей
+				li.footer-nav-item
+					a(href="#").footer-nav-link Блог
+				li.footer-nav-item
+					a(href="#").footer-nav-link Акции
+				li.footer-nav-item
+					a(href="#").footer-nav-link Подарки
+
+			ul.footer-nav-ctn
+				li.footer-nav-item
+					a(href="#").footer-nav-link Как купить
+				li.footer-nav-item
+					a(href="#").footer-nav-link Кредит онлайн
+				li.footer-nav-item
+					a(href="#").footer-nav-link Оплата онлайн
+				li.footer-nav-item
+					a(href="#").footer-nav-link Страховка онлайн
+				li.footer-nav-item
+					a(href="#").footer-nav-link Доставка
+				li.footer-nav-item
+					a(href="#").footer-nav-link Документы
+
+
+			ul.footer-nav-ctn
+				li.footer-nav-item
+					a(href="#").footer-nav-link FAQ
+				li.footer-nav-item
+					a(href="#").footer-nav-link Наша команда
+				li.footer-nav-item
+					a(href="#").footer-nav-link Наш склад
+				li.footer-nav-item
+					a(href="#").footer-nav-link Как получить
+				li.footer-nav-item
+					a(href="#").footer-nav-link Возврат
+
+			ul.footer-nav-ctn
+				li.footer-nav-item 8-800-070-50-00
+				li.footer-nav-item Санкт-Петербург
+				li.footer-nav-item.mb-30 Руставели , 53
+				li.footer-nav-item
+					a(href="#").footer-nav-link Как проехать
+				li.footer-nav-item
+					a(href="#").footer-nav-link Мы вас привезем
+				li.footer-nav-item
+					a(href="#").footer-nav-link Реквизиты
+		div.footer-line.clearfix
+			div.left.footer-links
+				a(href='#') Информация о конфиденциальности
+				br
+				a(href='#') Предложение оферты
+			div.right.footer-copyright
+				| Сделано в&nbsp;
+				a(href="http://playnext.ru/" target="_blank") PlayNext
+
+
+
+
