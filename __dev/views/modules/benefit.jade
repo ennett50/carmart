@@ -1,0 +1,70 @@
+.benefit.clearfix
+	-var item_type = [];
+	-item_type[0] = {}
+
+	-item_type[0].classWidth = '28'
+	-item_type[0].title = "ЭЛЕКТРОННЫЕ ПЛАТЕЖИ"
+	-item_type[0].title_link = "БЕЗ КОМИССИИ"
+	-item_type[0].text = "Оплачивайте покупки с любых карт или банковских <b>счетов без комиссии безопасно - онлайн</b>"
+	-item_type[0].big_size = 0
+	-item_type[0].blook = "online"
+
+	-item_type[1] = {}
+	-item_type[1].classWidth = '40'
+	-item_type[1].title = "«МАКСИМУМ»"
+	-item_type[1].title_link = "НАДЁЖНОСТИ"
+	-item_type[1].text = "У нас есть все, что ты видишь на сайте. Это гарантирует наш главный партнер <b>Автохолдинг «МАКСИМУМ»</b>"
+	-item_type[1].big_size = 0
+	-item_type[1].blook = "reliability"
+
+	-item_type[2] = {}
+	-item_type[2].classWidth = '32'
+	-item_type[2].title = "ПО САНКТ-ПЕТЕРБУРГУ"
+	-item_type[2].title_link = "БЕСПЛАТНАЯ ДОСТАВКА"
+	-item_type[2].text = "<b>БЕСПЛАТНО</b> Привезем машину ровно в срок. Блестеть она будет, как новенькая"
+	-item_type[2].big_size = 0
+	-item_type[2].blook = "free"
+
+	-item_type[3] = {}
+	-item_type[3].classWidth = '28'
+	-item_type[3].title = "Для всех автомобилей"
+	-item_type[3].title_link = "ОНЛАЙН КРЕДИТ"
+	-item_type[3].text = "Мы превратим Кредит в праздник и веселье. <b>И всё это не выходя из дома.</b>"
+	-item_type[3].big_size = 0
+	-item_type[3].blook = "buy"
+
+	-item_type[4] = {}
+	-item_type[4].title_link = "ГАРАНТИЯ"
+	-item_type[4].text = "У нас есть все, что ты видишь на сайте. Это гарантирует наш главный партнер <b>Автохолдинг «МАКСИМУМ»</b>"
+	-item_type[4].big_size = 1
+	-item_type[4].classWidth = '18'
+	-item_type[4].blook = "warranty"
+
+	-item_type[5] = {}
+	-item_type[5].classWidth = '22'
+	-item_type[5].title_link = "ЭКОНОМИЯ"
+	-item_type[5].text = "У нас есть все, что ты видишь на сайте. Это гарантирует наш главный партнер <b>Автохолдинг «МАКСИМУМ»</b>"
+	-item_type[5].big_size = 1
+	-item_type[5].blook = "pay"
+
+	-item_type[6] = {}
+	-item_type[6].classWidth = '32'
+	-item_type[6].title = "ВСЁ"
+	-item_type[6].title_link = "ВСЁ ПО-ЧЕСТНОМУ"
+	-item_type[6].text = "Настоящие фотографии <b>Честный пробег</b> Никаких газет под краской!"
+	-item_type[6].big_size = 0
+	-item_type[6].blook = "car"
+
+	-each item,index in item_type
+		div(class="benefit-item __width-#{item.classWidth} __#{item.blook}")
+			-if(item.blook != "free")
+				-if(item.big_size != 1)
+					.benefit-item-title= item.title
+				.benefit-item-scale= item.title_link
+					.benefit-item-content.invisible!= item.text
+			-else
+				.benefit-item-scale= item.title_link
+				.benefit-item-title= item.title
+					.benefit-item-content.invisible!= item.text
+
+
