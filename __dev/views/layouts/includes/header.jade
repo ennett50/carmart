@@ -1,16 +1,16 @@
 header.header
 	div.header-line
 		div.wrapper-content.clearfix.header-ctn
+			div.header-left-ctn
+				div.header-change-city
+					span Санкт-Петербург
+				div.button-info Доставим бесплатно
 
-			div.header-change-city
-				span Санкт-Петербург
-			div.button-info Доставим бесплатно
-
-			-var headerMenu = ['О carmart', 'Как это работает','Гарантии','Оплата','Почему наши цены ниже']
-			nav.header-nav
-				-for (var i=0;i<headerMenu.length;i++)
-					a(href="#").header-nav-item= headerMenu[i]
-					!="\n"
+				-var headerMenu = ['О carmart', 'Как это работает','Гарантии','Оплата','Почему наши цены ниже']
+				nav.header-nav
+					-for (var i=0;i<headerMenu.length;i++)
+						a(href="#").header-nav-item= headerMenu[i]
+						!="\n"
 
 
 			div.header-search

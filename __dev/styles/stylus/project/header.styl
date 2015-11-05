@@ -6,7 +6,13 @@
 		color #fff;
 		min-width: 1000px;
 		font-size 12px
-		margin-bottom 25px
+		margin-bottom 32px
+		padding-top: 2px;
+		height: 38px;
+	&-left-ctn
+		display inline-block
+		vertical-align middle
+		position relative
 	&-ctn
 		text-align: justify;
 		&:after
@@ -16,7 +22,8 @@
 	&-change-city
 		display inline-block
 		vertical-align middle
-		margin-right 15px
+		margin-right 19px
+		margin-left: -10px;
 		padding 10px 15px 10px 10px
 		border-radius 5px
 		trans()
@@ -54,10 +61,11 @@
 	&-nav
 		display inline-block
 		vertical-align middle
-		margin  0 10px
+		margin: 2px 29px 0;
+		position: relative;
 		&-item
 			display inline-block
-			padding 12px 10px
+			padding 10px
 			border-radius 5px
 			color #fff
 			text-decoration none
@@ -99,15 +107,17 @@
 			padding: 0 2px;
 			position: relative;
 			top: -3px;
-
 	&-bank
 		display inline-block
 		vertical-align middle
 		color #fff
 		text-transform uppercase
 		font-size 8px
+		margin-right: 18px;
+		margin-left: 78px;
 		font-family: 'Open Sans', sans-serif;
 		text-decoration none
+
 		&:hover
 			&:before
 				sprite($s-icon-bank-hover)
@@ -118,7 +128,7 @@
 			margin-bottom 4px
 	&-info
 		position relative
-		margin-bottom 40px
+		margin-bottom 47px
 		&-ctn
 			text-align justify
 			&:after
@@ -134,13 +144,13 @@
 		&-nav
 			display inline-block
 			vertical-align middle
-			margin-right 40px
+			margin-right 25px
 			text-transform uppercase
 			font-size 14px
 			text-decoration none
 			font-weight bold
 			color #505a68
-			margin-top: 15px;
+			margin-top: 20px;
 			&.icon-new-car, &.icon-old-car
 				&:before
 					content ''
@@ -166,7 +176,7 @@
 	&-logo
 		display inline-block
 		vertical-align middle
-		margin-right 30px
+		margin-right 44px
 		font-size 11px
 		color #848d9a
 		font-weight lighter
@@ -180,7 +190,9 @@
 		border-bottom 1px dotted #535a66
 		color #535a66
 		text-decoration none
-		margin-top 15px
+		margin-top: 19px;
+		margin-right: 17px;
+		margin-left: 22px;
 
 		&:hover
 			color #07aa8a

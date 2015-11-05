@@ -1,0 +1,44 @@
+.bx-wrapper .bx-prev
+	left 0
+	&:before
+		left 50%
+		margin-left -8px
+		sprite($s-arrow-prev)
+
+
+
+.bx-wrapper .bx-next
+	right: 0
+	&:before
+		right 50%
+		margin-right -8px
+		sprite($s-arrow-next)
+
+
+.bx-wrapper .bx-prev:hover
+	background-position: 0 0;
+
+
+.bx-wrapper .bx-next:hover
+	background-position: -43px 0;
+
+
+.bx-wrapper .bx-controls-direction a
+	position: absolute;
+	top: 0
+	width 42px
+	height 100%
+	display block
+	font-size 0
+	line-height 0
+	text-indent -9999px
+	background rgba(0,0,0,0)
+	trans()
+	&:hover
+		background rgba(0,0,0,0.5)
+	&:before
+		content ''
+		display block
+		position absolute
+		top 50%
+		margin-top -15px

@@ -5,10 +5,8 @@ var ui = {
 
         this.fancyBox();
 
-        // if btn is button(not submit form)
-        $('[data-target]').click(function (e) {
-            e.preventDefault();
-        });
+        this.sliderCatalog();
+
 
 
 
@@ -22,6 +20,13 @@ var ui = {
             padding: 0,
             margin: 40,
             loop: false
+        });
+    },
+    sliderCatalog: function(){
+        $('.js-catalog-slider').bxSlider({
+            mode: 'fade',
+            pager: false,
+            controls: true
         });
     }
 
