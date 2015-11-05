@@ -5,8 +5,14 @@
 		height: 118px;
 		float left
 		text-align: center;
+		&:not('.__online')
+			display none
 		&-title
 			position relative
+			text-transform: uppercase;
+			font-size: 18px;
+			margin-bottom 5px
+
 		&-scale
 			background: #535a66;
 			padding: 3px 8px;
@@ -28,7 +34,7 @@
 		//		border-left: 5px solid transparent;
 		//		position: absolute;
 		//		top: 0;
-		//		left: -5px;
+		//		left: -7px;
 		//	&:after
 		//		content: '';
 		//		width: 0;
@@ -37,7 +43,7 @@
 		//		border-right: 5px solid transparent;
 		//		position: absolute;
 		//		top: 0;
-		//		right: -5px;
+		//		right: -7px;
 		&.__width-22
 			width 22%
 		&.__width-40
@@ -63,7 +69,7 @@
 					border-left: 5px solid transparent;
 					position: absolute;
 					top: 0;
-					left: -5px;
+					left: -7px;
 				&:after
 					content: '';
 					width: 0;
@@ -72,7 +78,7 @@
 					border-right: 5px solid transparent;
 					position: absolute;
 					top: 0;
-					right: -5px;
+					right: -7px;
 			.benefit-item-content
 				&:after
 					display inline-block
@@ -80,26 +86,26 @@
 					sprite($s-icon-benefit-car)
 		&.__pay
 			.benefit-item-scale
-				font-size: 16px;
+				font-size: 18px;
 				padding: 8px;
 				&:before
 					content: '';
 					width: 0;
 					height: 0;
-					border-bottom: 32px solid #535a66;
-					border-left: 5px solid transparent;
+					border-bottom: 34px solid #535a66;
+					border-left: 7px solid transparent;
 					position: absolute;
 					top: 0;
-					left: -5px;
+					left: -7px;
 				&:after
 					content: '';
 					width: 0;
 					height: 0;
-					border-top: 32px solid #535a66;
-					border-right: 5px solid transparent;
+					border-top: 34px solid #535a66;
+					border-right: 7px solid transparent;
 					position: absolute;
 					top: 0;
-					right: -5px;
+					right: -7px;
 			.benefit-item-content
 				&:after
 					display inline-block
@@ -107,26 +113,26 @@
 					sprite($s-icon-benefit-pay)
 		&.__warranty
 			.benefit-item-scale
-				font-size: 16px;
+				font-size: 18px;
 				padding: 8px;
 				&:before
 					content: '';
 					width: 0;
 					height: 0;
-					border-bottom: 32px solid #535a66;
-					border-left: 5px solid transparent;
+					border-bottom: 34px solid #535a66;
+					border-left: 7px solid transparent;
 					position: absolute;
 					top: 0;
-					left: -5px;
+					left: -7px;
 				&:after
 					content: '';
 					width: 0;
 					height: 0;
-					border-top: 32px solid #535a66;
-					border-right: 5px solid transparent;
+					border-top: 37px solid #535a66;
+					border-right: 7px solid transparent;
 					position: absolute;
 					top: 0;
-					right: -5px;
+					right: -7px;
 			.benefit-item-content
 				&:after
 					display inline-block
@@ -134,26 +140,26 @@
 					sprite($s-icon-benefit-warranty)
 		&.__buy
 			.benefit-item-scale
-				font-size: 16px;
+				font-size: 18px;
 				padding: 8px;
 				&:before
 					content: '';
 					width: 0;
 					height: 0;
-					border-bottom: 32px solid #535a66;
-					border-left: 5px solid transparent;
+					border-bottom: 34px solid #535a66;
+					border-left: 7px solid transparent;
 					position: absolute;
 					top: 0;
-					left: -5px;
+					left: -7px;
 				&:after
 					content: '';
 					width: 0;
 					height: 0;
-					border-top: 32px solid #535a66;
-					border-right: 5px solid transparent;
+					border-top: 42px solid #535a66;
+					border-right: 7px solid transparent;
 					position: absolute;
 					top: 0;
-					right: -5px;
+					right: -7px;
 			.benefit-item-content
 				&:after
 					display inline-block
@@ -161,7 +167,7 @@
 					sprite($s-icon-benefit-buy)
 		&.__free
 			.benefit-item-scale
-				font-size: 16px;
+				font-size: 18px;
 				&:before
 					content: '';
 					width: 0;
@@ -170,7 +176,7 @@
 					border-left: 5px solid transparent;
 					position: absolute;
 					top: 0;
-					left: -5px;
+					left: -7px;
 				&:after
 					content: '';
 					width: 0;
@@ -179,7 +185,7 @@
 					border-right: 5px solid transparent;
 					position: absolute;
 					top: 0;
-					right: -5px;
+					right: -7px;
 			.benefit-item-content
 				&:after
 					display inline-block
@@ -198,7 +204,7 @@
 					border-left: 5px solid transparent;
 					position: absolute;
 					top: 0;
-					left: -5px;
+					left: -7px;
 				&:after
 					content: '';
 					width: 0;
@@ -207,34 +213,39 @@
 					border-right: 5px solid transparent;
 					position: absolute;
 					top: 0;
-					right: -5px;
+					right: -7px;
 			.benefit-item-content
 				&:after
 					display inline-block
 					content ''
 					sprite($s-icon-benefit-reliability)
+
 		&.__online
+			position: relative;
+			top: 15px;
+			left: 195px;
+			text-align: left;
 			.benefit-item-scale
-				font-size: 16px;
+				font-size: 18px;
 				padding: 8px;
 				&:before
 					content: '';
 					width: 0;
 					height: 0;
-					border-bottom: 32px solid #535a66;
-					border-left: 5px solid transparent;
+					border-bottom: 34px solid #535a66;
+					border-left: 7px solid transparent;
 					position: absolute;
 					top: 0;
-					left: -5px;
+					left: -7px;
 				&:after
 					content: '';
 					width: 0;
 					height: 0;
-					border-top: 32px solid #535a66;
-					border-right: 5px solid transparent;
+					border-top: 34px solid #535a66;
+					border-right: 7px solid transparent;
 					position: absolute;
 					top: 0;
-					right: -5px;
+					right: -7px;
 			.benefit-item-content
 				&:after
 					display inline-block
