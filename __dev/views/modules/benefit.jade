@@ -56,15 +56,18 @@
 	-item_type[6].blook = "car"
 
 	-each item,index in item_type
-		div(class="benefit-item __width-#{item.classWidth} __#{item.blook}")
-			-if(item.blook != "free")
-				-if(item.big_size != 1)
+		if (index == 0)
+			div(class="benefit-item __width-#{item.classWidth} __#{item.blook}")
+				-if(item.blook != "free")
+					-if(item.big_size != 1)
+						.benefit-item-title= item.title
+					.benefit-item-scale= item.title_link
+						.benefit-item-content.invisible!= item.text
+				-else
+					.benefit-item-scale= item.title_link
 					.benefit-item-title= item.title
-				.benefit-item-scale= item.title_link
-					.benefit-item-content.invisible!= item.text
-			-else
-				.benefit-item-scale= item.title_link
-				.benefit-item-title= item.title
-					.benefit-item-content.invisible!= item.text
+						.benefit-item-content.invisible!= item.text
+
+			div.clear
 
 

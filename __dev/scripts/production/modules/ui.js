@@ -19,7 +19,12 @@ var ui = {
         $(".js-fancybox").fancybox({
             padding: 0,
             margin: 40,
-            loop: false
+            loop: false,
+
+            closeBtn: true,
+            wmode: 'transparent',
+            allowfullscreen   : 'true',
+            allowscriptaccess : 'always'
         });
     },
     sliderCatalog: function(){
