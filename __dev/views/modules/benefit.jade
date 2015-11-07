@@ -50,24 +50,23 @@
 	-item_type[6] = {}
 	-item_type[6].classWidth = '32'
 	-item_type[6].title = "ВСЁ"
-	-item_type[6].title_link = "ВСЁ ПО-ЧЕСТНОМУ"
+	-item_type[6].title_link = "ПО-ЧЕСТНОМУ"
 	-item_type[6].text = "Настоящие фотографии <b>Честный пробег</b> Никаких газет под краской!"
 	-item_type[6].big_size = 0
 	-item_type[6].blook = "car"
 
 	-each item,index in item_type
-		if (index == 0)
-			div(class="benefit-item __width-#{item.classWidth} __#{item.blook}")
-				-if(item.blook != "free")
-					-if(item.big_size != 1)
-						.benefit-item-title= item.title
-					.benefit-item-scale= item.title_link
-						.benefit-item-content.invisible!= item.text
-				-else
-					.benefit-item-scale= item.title_link
+		div(class="benefit-item __width-#{item.classWidth} __#{item.blook}")
+			-if(item.blook != "free")
+				-if(item.big_size != 1)
 					.benefit-item-title= item.title
-						.benefit-item-content.invisible!= item.text
+				.benefit-item-scale= item.title_link
+				.benefit-item-content.invisible!= item.text
+			-else
+				.benefit-item-scale= item.title_link
+				.benefit-item-title= item.title
+				.benefit-item-content.invisible!= item.text
 
-			div.clear
+
 
 

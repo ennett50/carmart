@@ -20,11 +20,11 @@ var ui = {
             padding: 0,
             margin: 40,
             loop: false,
-
             closeBtn: true,
             wmode: 'transparent',
             allowfullscreen   : 'true',
-            allowscriptaccess : 'always'
+            allowscriptaccess : 'always',
+
         });
     },
     sliderCatalog: function(){
