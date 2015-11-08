@@ -9,6 +9,20 @@
 	&-item
 		height: 118px;
 		float left
+		font-size 14px
+		padding-left 7px
+		border-box()
+		position relative
+
+		&-content
+			line-height: 20px;
+			position absolute
+			background #fff
+			z-index 1
+			top: 0;
+			left: 0;
+			width: 100%;
+			//display none
 		&-title
 			position relative
 			text-transform: uppercase;
@@ -56,7 +70,7 @@
 
 		&.__car
 			position: relative;
-			left: 107px;
+			left: 100px;
 			top: 5px;
 			.benefit-item-title
 				font-size: 24px;
@@ -71,8 +85,7 @@
 		&.__pay
 			position: relative;
 			top: 17px;
-			left: 126px;
-
+			left: 119px;
 		.benefit-item-content
 				&:after
 					display inline-block
@@ -80,16 +93,11 @@
 					sprite($s-icon-benefit-pay)
 		&.__warranty
 			position: relative;
-			left: 106px;
+			left: 99px;
 			top: 17px;
-			.benefit-item-content
-				&:after
-					display inline-block
-					content ''
-					sprite($s-icon-benefit-warranty)
 		&.__buy
 			position: relative;
-			left: 128px;
+			left: 121px;
 			top: 11px;
 			.benefit-item-content
 				&:after
@@ -98,7 +106,7 @@
 					sprite($s-icon-benefit-buy)
 		&.__free
 			position: relative;
-			left: 67px;
+			left: 60px;
 			top: 8px;
 			.benefit-item-content
 				&:after
@@ -107,7 +115,7 @@
 					sprite($s-icon-benefit-free)
 		&.__reliability
 			position: relative;
-			left: 189px;
+			left: 182px;
 			.benefit-item-title
 				font-size: 24px;
 			.benefit-item-scale
@@ -125,7 +133,7 @@
 					sprite($s-icon-benefit-reliability)
 		&.__online
 			position: relative;
-			left: 168px;
+			left: 161px;
 			top: 6px;
 			text-align: left;
 			.benefit-item-content
