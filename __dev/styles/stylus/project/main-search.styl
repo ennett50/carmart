@@ -14,7 +14,6 @@
 		position: absolute;
 		top: 0;
 		left: -11px;
-
 	&:after
 		content: '';
 		width: 0;
@@ -39,5 +38,120 @@
 		top: 17px;
 		trans()
 		sprite($s-icon-main-search)
+
 		&:hover
 			opacity 0.7
+	&-popup
+		position absolute
+		top 0
+		left 0
+		width 100%
+		z-index 10
+		height 100%
+		display none
+		background rgb(255,255,255)
+		.wrapper-content
+			position relative
+	&-header
+		position: relative;
+		background: #535a66;
+		color: #fff;
+		text-align: center;
+		padding: 10px 0;
+		margin-bottom: 52px;
+		&:after
+			background: images("bg/shadow-top-search.png") no-repeat 50% 0;
+			height 48px
+			content ''
+			display block
+			width 100%
+			position absolute
+			bottom -48px
+
+
+	&-cancel
+		position: absolute;
+		left: 0;
+		cursor: pointer;
+		top: 3px;
+		border-bottom: 1px dotted #fff;
+		color #fff
+		trans()
+		&:hover
+			opacity 0.8
+	&-title
+		font-size: 15px;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin-bottom: 20px;
+	&-ctn
+		padding 0 142px
+	&-nav
+		margin-bottom 90px
+		position relative
+		font-size 15px
+		&-item
+			display inline-block
+			vertical-align top
+			margin 0 34px 0 0
+			position relative
+			text-decoration none
+			font-weight 300
+			&:hover, &.__active
+				color #10aa8b
+			&.__active
+				&:after
+					content: '.';
+					position: absolute;
+					right: -20px;
+					top: -10px;
+					color: #10aa8b;
+					font-weight: bold;
+					font-size: 24px;
+	&-info
+		margin-bottom 88px
+		font-size 14px
+		position relative
+		p
+			line-height normal
+	&-map
+		position relative
+		padding-top 45px
+		border-box()
+		&-ctn
+			position relative
+			&:before
+				display block
+				height 100%
+				left 0
+				top 0
+				width 100%
+				position absolute
+				content ''
+				z-index 5
+				background: images("bg/mask-map.png") no-repeat 50% 0;
+
+		&:before
+			background: images("bg/shadow-bottom-search.png") no-repeat 50% 0;
+			height 48px
+			content ''
+			display block
+			width 100%
+			position absolute
+			top -48px
+		&-icon
+			background images('icon/icon-carmart.png') 50% 0 no-repeat
+			font-size 10px
+			text-transform uppercase
+			position absolute
+			padding-top: 71px;
+			top: -50px;
+			left: 90px;
+			width 90px
+			text-align center
+			border-box()
+			color #10aa8b
+
+.map-search
+	width 100%
+	height 995px
