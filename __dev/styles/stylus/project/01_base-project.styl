@@ -70,11 +70,11 @@ main
 		border-box()
 		font-size 15px
 		font-weight 900
-		color #fff
+		color #4f5a67
 		padding: 0 5px;
 		line-height 44px
 		height 44px
-		background: #00ac8b;
+		background: #f2f3f5;
 		text-transform uppercase
 		trans()
 		width 140px
@@ -93,6 +93,8 @@ main
 			visibility hidden
 		&:hover
 			color #00ac8b
+			background images("bg/bg-btn-info.png") no-repeat transparent
+
 			&:before
 				left 0
 				opacity 1
@@ -174,17 +176,23 @@ a
 	float right
 	.content
 		margin-left 140px
-
 .hint-price
 	color #fff
 	position absolute
-	top 10px
+	top -20px
 	left 0
+	right 0
+	margin auto
+	width auto
 	background #10aa8b
 	z-index 5
 	font-size 15px
-	border-radius 0 5px 5px 0
-	padding 13px 15px 12px 15px
-
+	border-radius 5px
+	max-width: 187px;
+	text-align: center;
+	padding 13px 9px 12px 9px
+	&.__small
+		font-size 12px
+		text-transform uppercase
 .__through
 	text-decoration line-through

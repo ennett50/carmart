@@ -21,7 +21,7 @@
 	-item_type[2].classWidth = '32'
 	-item_type[2].title = "ПО САНКТ-ПЕТЕРБУРГУ"
 	-item_type[2].title_link = "БЕСПЛАТНАЯ ДОСТАВКА"
-	-item_type[2].text = "Привезем ваш автомобиль по любому адресу в Санкт-Петербурге и окрестностях.<a href='#'>Карту доставки смотрите здесь.</a>"
+	-item_type[2].text = "Привезем ваш автомобиль по любому адресу в Санкт-Петербурге и окрестностях.<br/><a href='#'>Карту доставки смотрите здесь.</a>"
 	-item_type[2].big_size = 0
 	-item_type[2].blook = "free"
 
@@ -61,11 +61,13 @@
 				-if(item.big_size != 1)
 					.benefit-item-title= item.title
 				.benefit-item-scale= item.title_link
-				.benefit-item-content!= item.text
+				.benefit-item-content
+					div.benefit-item-desc!= item.text
 			-else
 				.benefit-item-scale= item.title_link
 				.benefit-item-title= item.title
-				.benefit-item-content!= item.text
+				.benefit-item-content
+					div.benefit-item-desc!= item.text
 
 
 

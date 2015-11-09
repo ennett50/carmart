@@ -7,7 +7,7 @@ div.catalog
 
 	-var catalog = []
 	-catalog[0] = {}
-	-catalog[0].hint_price = 'true'
+	-catalog[0].hint_price = '<b>800 000 Р</b> до 18.10.2015'
 	-catalog[0].old_car = 'true'
 	-catalog[0].in_compare = 'true'
 	-catalog[0].title = 'Volkswagen Jetta 2.0 TDi'
@@ -32,6 +32,8 @@ div.catalog
 
 	-catalog[2] = {}
 	-catalog[2].old_car = 'true'
+	-catalog[2].hint_price = 'Кожаный салон'
+	-catalog[2].hint_price_small = "true"
 	-catalog[2].title = 'Ford Mondeo'
 	-catalog[2].desc = '186 л.с. (2.0 EcoPower) АИ-95: 10л / 15л'
 	-catalog[2].year = '<b>2015</b> г.в.'
@@ -42,12 +44,13 @@ div.catalog
 	-catalog[2].one = 'true'
 
 
+
 	-for (var j =0; j<2;j++)
 		-each item, index in catalog
 			div.catalog-item
 				div.catalog-item-gallery
 					if (item.hint_price)
-						div.hint-price <b>800 000 Р</b> до 18.10.2015
+						div.hint-price(class="#{item.hint_price_small ? '__small' : ''}")!= item.hint_price
 					if (item.old_car)
 						div.icon-mustache
 

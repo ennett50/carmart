@@ -7,10 +7,6 @@ var ui = {
 
         this.sliderCatalog();
 
-
-
-
-
     },
     phoneMask: function () {
         $("input.js-phone-mask").mask("+7(999) 999-99-99");
@@ -23,7 +19,7 @@ var ui = {
             closeBtn: true,
             wmode: 'transparent',
             allowfullscreen   : 'true',
-            allowscriptaccess : 'always',
+            allowscriptaccess : 'always'
 
         });
     },
