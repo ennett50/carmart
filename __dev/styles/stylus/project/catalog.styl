@@ -216,9 +216,47 @@
 			text-decoration none
 			font-weight 700
 			trans()
+			&.__old-car
+				&:before
+					right inherit
+					left -10px
+					border-width: 9px 10px 9px 0;
+					border-color: transparent #01ac8a transparent transparent;
+				&:after
+					right inherit
+					left -7px
+					border-width: 7px 8px 7px 0;
+					border-color: transparent #ffffff transparent transparent;
+			&:before
+				content: '';
+				display: block;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 9px 0 9px 10px;
+				border-color: transparent transparent transparent #01ac8a;
+				position: absolute;
+				margin-top: -8px;
+				right: -10px;
+				top: 50%
+			&:after
+				content: '';
+				trans()
+				display: block;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 7px 0 7px 8px;
+				border-color: transparent transparent transparent #ffffff;
+				position: absolute;
+				margin-top: -6px;
+				right: -7px;
+				top: 50%
 			&:hover
 				background  #00ac8b
 				color #fff
+				&:after
+					border-color transparent transparent transparent #01ac8a
 		&-title
 			text-transform uppercase
 			font-size 18px
