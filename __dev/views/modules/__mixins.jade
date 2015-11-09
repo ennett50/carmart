@@ -118,4 +118,28 @@ mixin sliderList(title, params)
 								div.catalog-items_new-price #{item.price} <span class="rub"></span>
 							a(href="#").button В корзину
 
+
+mixin breadcrumbstBlog(brArray, sep, wrap)
+	-if( !sep )
+		-sep = ''
+	-var counter = 0
+	.breadcrumbs-blog
+		-if( wrap === true )
+			-wrap = [ '<div class="breadcrumbs-wrapper wrapper-content">', '</div>' ]
+		-else
+			-wrap = ['', '']
+		+wrapIn( wrap )
+			-each br, index in brArray
+				-if(br== "") continue
+				!='\n'
+				-if( (counter + 1) == brArray.length )
+					span.breadcrumbs-link.__current!= br
+					!='\n'
+				-else
+					a(href="#").breadcrumbs-link!= br
+					!='\n'
+					span.breadcrumbs-sep!= sep
+				-counter++
+
+
 include _customMixin
