@@ -1,0 +1,17 @@
+extends layouts/_default
+block vars
+	-var currentPageTitle = "Блог"
+	-var oneColumn = "true"
+block title
+	title=currentPageTitle
+block block-content
+	+breadcrumbstBlog(["ВСЕ СТАТЬИ БЛОГА", "КАК НЕ УСНУТЬ ЗА РУЛЕМ В ДОЛГОМ ПУТЕШЕСТВИИ?"], "/")
+	.blog
+		.social-likes
+			.facebook(title='Поделиться ссылкой на Фейсбуке') Facebook
+			.twitter(title='Поделиться ссылкой в Твиттере') Twitter
+			.vkontakte(title='Поделиться ссылкой во Вконтакте') Вконтакте
+
+		.blog-images
+			img(src="images/example/reviews/1.png", alt=" ")
+

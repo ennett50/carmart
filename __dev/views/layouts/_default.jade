@@ -8,10 +8,13 @@ html(lang="ru").no-js
 		include ../modules/change-city
 		include includes/header
 		div.wrapper-content
-			include ../modules/left-menu
-			div.right-column
-				div.content
-					block block-content
+			if (!oneColumn)
+				include ../modules/left-menu
+				div.right-column
+					div.content
+						block block-content
+			else
+				block block-content
 
 
 
