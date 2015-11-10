@@ -34,11 +34,12 @@ var ui = {
     },
     changeCity : function(){
         $('.js-change-city').click(function(){
-            $('.main-search-popup').fadeIn();
+            $('.main-search-popup').fadeIn().append('<div class="close-popup js-cancel-search"></div>')
         });
-        $('.js-cancel-search').click(function(){
+        $('body').on('click', '.js-cancel-search', function(){
             $('.main-search-popup').fadeOut();
-        })
+            $('.close-popup').remove()
+        });
     }
 
 };

@@ -43,7 +43,7 @@
 				content-center(100%, 208px)
 		&-ctn
 			position relative
-			padding 28px 18px 18px
+			padding 25px 18px 18px
 			color #4f5a67
 			font-size 15px
 		&-btns
@@ -123,7 +123,7 @@
 					sprite($s-icon-comapre-hover)
 		&-favorite
 			display inline-block
-			margin  0 20px 0 5px
+			margin  0 18px 0 5px
 			vertical-align middle
 			&:before
 				content ''
@@ -133,17 +133,19 @@
 				&:before
 					sprite($s-icon-favorite-hover)
 	p
-		margin-bottom 10px
+		margin-bottom: 8px;
 		line-height: normal;
+		letter-spacing: -0.5px;
 	&-title
 		font-size 20px
 		font-weight 900
 		margin-bottom 10px
+		letter-spacing: -0.5px;
 		_text-overflow(100%)
 	&-detail
 		float left
 		position: relative;
-		top: 75px;
+		top: 48px;
 		@media screen and (max-width 1350px)
 			display none
 		&-icon
@@ -159,7 +161,7 @@
 				& + .catalog-detail-hint
 					opacity 1
 			&.__reliability
-				sprite($s-icon-reliability)
+				sprite($s-icon-reliability-catalog)
 			&.__gasoline
 				sprite($s-icon-gasoline)
 			&.__compressor
@@ -174,7 +176,7 @@
 			width: 139px;
 			line-height: normal;
 			opacity 0
-			padding-top: 51px;
+			padding-top: 20px;
 			trans()
 			p
 				margin-bottom: 3px;
@@ -183,6 +185,7 @@
 	&-price
 		float right
 		text-align right
+		margin-top: -25px;
 
 		&-rf
 			color #a1adbb
@@ -193,6 +196,7 @@
 			font-size 15px
 			margin-bottom 5px
 		&-credit
+			letter-spacing: -0.8px;
 			b
 				font-size 20px
 			margin-bottom 10px
