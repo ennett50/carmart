@@ -6,13 +6,13 @@
 	border: 0!important;
 
 
-p
-	base-font()
-	line-height: 30px;
-	margin-bottom 45px
-	font-size 18px
-	color #848d9a
-	font-weight 300
+//p
+//	base-font()
+//	line-height: 30px;
+//	margin-bottom 45px
+//	font-size 18px
+//	color #848d9a
+//	font-weight 300
 .text
 	base-font()
 	line-height: 30px;
@@ -76,6 +76,9 @@ p
 .italic 
 	font-style italic
 
+.font-normal
+	font-weight normal
+
 .decoration 
 	text-decoration underline
 
@@ -113,13 +116,17 @@ p
 	.text
 		padding 0 10px
 
-h1
+h1, .title-h1
 	color #535a66
 	font-weight 300
 	font-family Roboto, Arial, sans-serif
 	margin-bottom 20px
 	font-size 49px
-
+	text-decoration none
+a.title-h1
+	display block
+	&:hover
+		text-decoration underline
 .text-column
 	position relative
 	max-width 600px

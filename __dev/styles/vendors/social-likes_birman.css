@@ -299,16 +299,7 @@
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAANCAYAAAB7AEQGAAAAYklEQVR42mL4//8/AxKWB+L9QKyALI6u4Nx/CDiLrBCmgBGIdwOxEVQRiN4DFWcAE1DAAsR/gBgkwIjEBzMaGBAAmf0Hzgea1IDm+P9o/AYmBiIAbRUx0s46FizhgwEAAgwAAJd9Vn3NlgwAAAAASUVORK5CYII=")
 }
 
-.social-likes__icon_facebook {
-    width: 40px;
-    line-height: inherit;
-    height: 40px;
-    background: #008ae2 url("../images/icon/icon-fb.png") 50% 50% no-repeat;
-    margin: -5px 10px -5px -5px;
-    border-radius: 5px 0 0 5px;
-    display: block;
-    position: relative;
-}
+
 
 /*.social-likes__widget_facebook:hover, .social-likes__widget_facebook:active, .social-likes__widget_facebook:focus {*/
     /*background: #425497;*/
@@ -445,6 +436,16 @@
     line-height: inherit;
     height: 40px;
     background: #3aaae1 url("../images/icon/icon-twitter.png") 50% 50% no-repeat;
+    margin: -5px 10px -5px -5px;
+    border-radius: 5px 0 0 5px;
+    display: block;
+    position: relative;
+}
+.social-likes__icon_facebook {
+    width: 40px;
+    line-height: inherit;
+    height: 40px;
+    background: #008ae2 url("../images/icon/icon-fb.png") 50% 50% no-repeat;
     margin: -5px 10px -5px -5px;
     border-radius: 5px 0 0 5px;
     display: block;
