@@ -5,16 +5,17 @@ doctype html
 html(lang="ru").no-js
 	include includes/head.jade
 	body
-		include ../modules/change-city
-		include includes/header
-		div.wrapper-content
-			if (!oneColumn)
-				include ../modules/left-menu
-				div.right-column
-					div.content
-						block block-content
-			else
-				block block-content
+		main
+			include ../modules/change-city
+			include includes/header
+			div.wrapper-content
+				if (!oneColumn)
+					include ../modules/left-menu
+					div.right-column
+						div.content
+							block block-content
+				else
+					block block-content
 
 
 

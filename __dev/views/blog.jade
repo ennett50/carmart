@@ -5,15 +5,61 @@ block vars
 block title
 	title=currentPageTitle
 block block-content
-	+breadcrumbstBlog(["ВСЕ СТАТЬИ БЛОГА", "КАК НЕ УСНУТЬ ЗА РУЛЕМ В ДОЛГОМ ПУТЕШЕСТВИИ?"], "/")
+	+breadcrumbsSimple(["ВСЕ СТАТЬИ БЛОГА", "КАК НЕ УСНУТЬ ЗА РУЛЕМ В ДОЛГОМ ПУТЕШЕСТВИИ?"], "/")
 	.blog
-		.social-likes(data-url="12")
-			.facebook(title='Поделиться ссылкой на Фейсбуке')
-				//span.one-plus +1
-			.vkontakte(title='Поделиться ссылкой во Вконтакте')
-				//span.one-plus +1
-			.twitter(title='Поделиться ссылкой в Твиттере')
-				//span.one-plus +1
-		.blog-images
+		div.blog-header
+			div.blog-btns
+				.social-likes
+					.facebook(title='Поделиться ссылкой на Фейсбуке')
+					.vkontakte(title='Поделиться ссылкой во Вконтакте')
+					.twitter(title='Поделиться ссылкой в Твиттере')
+				!='\n'
+				a(href="#").blog-copy-link Скопировать ссылку
+
 			img(src="images/example/reviews/1.png", alt=" ")
+			div.blog-header-ctn
+				h1 Как не уснуть за рулём в долгом путешествии?
+				div.blog-date опубликовано <span>25 октября 2015</span>
+				div.blog-tags <span>tags:</span> полезные советы, в дорогу, кармарт рекомендует
+
+
+		div.text
+			div.text-column
+				p Впереди выходные и, возможно, вы решите куда-то поехать, и возможно, куда-то далеко. А долгие поездки нередко вызывают у нас сонливость.
+				p Существует несколько способов, которые помогут на некоторое время взбодриться и без эксцессов закончить путешествие.
+
+				p
+					b Разговоры
+					br
+					|Самый простой, надёжный и к тому же бесплатный способ – общение с пассажирами. Ничто так не стимулирует работу головного мозга, как интересный разговор.
+
+				p
+					b Аудио
+					br
+					| Если нет возможности обоюдного общения, возьмите с собой какие-либо аудиофайлы, чтобы слушать. Но будьте осторожны: монотонная музыка без слов может сыграть с вами злую шутку.
+				p
+					b Песни
+					br
+					| Если прослушивание любимой музыки не помогает взбодриться, то можно подпевать. Причём чем громче, тем лучше!
+				p
+					b Кофе
+					br
+					| Тонизирующие напитки (чай, кофе, горячий шоколад) способны придать бодрости.
+				p
+					b <span class="font-red">Тонизирующие напитки</span>
+					br
+					| Действие многих «энергетиков» основано на том же кофеине с добавлением различных «присадок»: экстракта гуараны, таурина, различных витаминов и полезных кислот. <span class="font-red">Не стоит забывать, что энергетические напитки очень вредны для здоровья</span>, даже производители таких товаров предупреждают о том, что больше трех порций в сутки пить не рекомендуется. Ну, а мы и вовсе рекомендуем воздержаться. Оставьте их на план «Б».
+			div.text-video.align-left.icon-play
+				a(href="#video-content").js-fancybox
+					img(src="images/example/video.png" alt="")
+
+
+				div#video-content.hidden
+					object(type='application/x-shockwave-flash', data='images/player/player_flv_multi.swf', width='1081', height='540')
+						param(name='movie', value='images/player/player_flv_multi.swf')
+						param(name='allowFullScreen', value='true')
+						param(name='FlashVars', value='flv=video_test.flv&startimage=images/player/video.png&showtime=1&width=1081&height=540&volume=200&autonext=0&margin=0&bgcolor1=ffffff&bgcolor2=ffffff&showstop=1&showvolume=1&showopen=0&showplayer=always&showfullscreen=1&playercolor=10aa8b&loadingcolor=ffffff&buttonovercolor=396159&slidercolor1=ffffff&slidercolor2=ffffff&sliderovercolor=396159&buffermessage=Загружается _n_&ondoubleclick=fullscreen&iconplaybgcolor=ffffff&videobgcolor=ffffff')
+
+
+
 

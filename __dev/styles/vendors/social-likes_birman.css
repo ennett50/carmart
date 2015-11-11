@@ -83,6 +83,9 @@
     position: absolute;
     right: 5px;
     top: 5px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
 
 }
 .social-likes__icon {
@@ -98,8 +101,8 @@
 
 .social-likes_ready .social-likes__counter, .social-likes__counter_single {
     display: inline-block;
-    padding-right: 7px;
-    padding-left: 12px;
+    padding-right: 16px;
+    padding-left: 5px;
 }
 
 .social-likes_ready .social-likes__counter_empty {
@@ -142,7 +145,6 @@
 
 .social-likes {
     min-height: 36px;
-    margin: -6px
 }
 
 .social-likes, .social-likes_single-w {
@@ -162,15 +164,13 @@
 .social-likes__widget:hover, .social-likes__widget:active, .social-likes__widget:focus {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #fff;
     cursor: pointer
 }
 
 .social-likes__button, .social-likes__counter {
     vertical-align: middle;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    font-size: 13px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: normal;
     cursor: inherit
 }
 
@@ -207,7 +207,7 @@
     top: 0;
     bottom: 0;
     left: -1px;
-    border-left: 1px solid;
+    border-left: 1px solid transparent;
     opacity: .4
 }
 
@@ -300,30 +300,37 @@
 }
 
 .social-likes__icon_facebook {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAaklEQVR42mJ0Cp7jycDAMBeIJRnwg+dAnMxEpGIGqJq5THgULwFicSBmBGJbmCYWPCYWAvEbdEF8GmCK/yMLMjGQCLBpsIW6GwaQ/UC6Ddj8cBjJZOr44TkJ6l+ANKSAGEQofgpKGgABBgAWcxAZp2KpkQAAAABJRU5ErkJggg==")
+    width: 40px;
+    line-height: inherit;
+    height: 40px;
+    background: #008ae2 url("../images/icon/icon-fb.png") 50% 50% no-repeat;
+    margin: -5px 10px -5px -5px;
+    border-radius: 5px 0 0 5px;
+    display: block;
+    position: relative;
 }
 
-.social-likes__widget_facebook:hover, .social-likes__widget_facebook:active, .social-likes__widget_facebook:focus {
-    background: #425497;
-    border-color: #425497
-}
+/*.social-likes__widget_facebook:hover, .social-likes__widget_facebook:active, .social-likes__widget_facebook:focus {*/
+    /*background: #425497;*/
+    /*border-color: #425497*/
+/*}*/
 
-.social-likes__widget_facebook:hover .social-likes__icon_facebook, .social-likes__widget_facebook:active .social-likes__icon_facebook, .social-likes__widget_facebook:focus .social-likes__icon_facebook {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAaUlEQVR42mL6//+/JxA/+08YgNR4MoIYDAwMkgzEgedMeBQvAWJxIGYEYluomCQLHtMKgfgNuiA+DTDF/5EFmRhIBNg02ELdDQPIfiDdBlCw/sclRzU/PCdB/QuQhhQQgwjFT4E4GSDAAMuiQX7Tr7YFAAAAAElFTkSuQmCC")
-}
+/*.social-likes__widget_facebook:hover .social-likes__icon_facebook, .social-likes__widget_facebook:active .social-likes__icon_facebook, .social-likes__widget_facebook:focus .social-likes__icon_facebook {*/
+    /*background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAaUlEQVR42mL6//+/JxA/+08YgNR4MoIYDAwMkgzEgedMeBQvAWJxIGYEYluomCQLHtMKgfgNuiA+DTDF/5EFmRhIBNg02ELdDQPIfiDdBlCw/sclRzU/PCdB/QuQhhQQgwjFT4E4GSDAAMuiQX7Tr7YFAAAAAElFTkSuQmCC")*/
+/*}*/
 
-.social-likes__icon_twitter {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAYAAABSgIzaAAAA9ElEQVR42mKU3vqak4GB4TcQ/2HABFxAXA3EzkD8DIjbgfg+ECuwAIkwIHYD4gSoAchgORD7IfEDgPgpEGczAQlBII4C4kNAbIikSAqIfdEMYgRiMSD+B7JxJ9SZFkB8Foj3A/FWIP4KVYgO5gHxFpBGNSA+DsS2UIVOUIwLfAYRIKe+gGoiFpyDaTwJxEVA/J0ITd+hXgNrBIETMCcQADOA+D26RpCn/+LRdAuI62EcmMb/0IjOx6H5ATSu4a4ChaoPEMcAsTUQy6Bp+AfEy4C4EIjfIEuANG4B4rvQVKEOTWYfoKG3HYgfoluvPm8jA0CAAQAqvDQ/IXqkWQAAAABJRU5ErkJggg==")
-}
+/*.social-likes__icon_twitter {*/
+    /*background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAYAAABSgIzaAAAA9ElEQVR42mKU3vqak4GB4TcQ/2HABFxAXA3EzkD8DIjbgfg+ECuwAIkwIHYD4gSoAchgORD7IfEDgPgpEGczAQlBII4C4kNAbIikSAqIfdEMYgRiMSD+B7JxJ9SZFkB8Foj3A/FWIP4KVYgO5gHxFpBGNSA+DsS2UIVOUIwLfAYRIKe+gGoiFpyDaTwJxEVA/J0ITd+hXgNrBIETMCcQADOA+D26RpCn/+LRdAuI62EcmMb/0IjOx6H5ATSu4a4ChaoPEMcAsTUQy6Bp+AfEy4C4EIjfIEuANG4B4rvQVKEOTWYfoKG3HYgfoluvPm8jA0CAAQAqvDQ/IXqkWQAAAABJRU5ErkJggg==")*/
+/*}*/
 
-.social-likes__widget_twitter:hover, .social-likes__widget_twitter:active, .social-likes__widget_twitter:focus {
-    background: #00b7ec;
-    border-color: #00b7ec
-}
+/*.social-likes__widget_twitter:hover, .social-likes__widget_twitter:active, .social-likes__widget_twitter:focus {*/
+    /*background: #00b7ec;*/
+    /*border-color: #00b7ec*/
+/*}*/
 
-.social-likes__widget_twitter:hover .social-likes__icon_twitter, .social-likes__widget_twitter:active .social-likes__icon_twitter, .social-likes__widget_twitter:focus .social-likes__icon_twitter {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAQAAAD4iURRAAAAo0lEQVQYGQXBsSoEAACA4Z8YKIO6yXLzjYrkHS5Wm5GyYPMAUgarMikpGZQHsFh4BZPhJi9wJdzn+7JkQZJk2bl3TzYNbGTfvUVJ8gyYmdjJMd6sS9bMAHwbZ+QHMy9OHQDgWtn1CgAALpUtAADAnpITUwAAU6tKtn0BALiSkjkXfgHAhxUpybwjvwA+DSVl7MEEwJ87A0lKRs7cenTj0FCSpH8xHAhkcGt6PAAAAABJRU5ErkJggg==")
-}
+/*.social-likes__widget_twitter:hover .social-likes__icon_twitter, .social-likes__widget_twitter:active .social-likes__icon_twitter, .social-likes__widget_twitter:focus .social-likes__icon_twitter {*/
+    /*background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAQAAAD4iURRAAAAo0lEQVQYGQXBsSoEAACA4Z8YKIO6yXLzjYrkHS5Wm5GyYPMAUgarMikpGZQHsFh4BZPhJi9wJdzn+7JkQZJk2bl3TzYNbGTfvUVJ8gyYmdjJMd6sS9bMAHwbZ+QHMy9OHQDgWtn1CgAALpUtAADAnpITUwAAU6tKtn0BALiSkjkXfgHAhxUpybwjvwA+DSVl7MEEwJ87A0lKRs7cenTj0FCSpH8xHAhkcGt6PAAAAABJRU5ErkJggg==")*/
+/*}*/
 
 .social-likes__icon_plusone {
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAMCAYAAAC5tzfZAAABD0lEQVR42nTSsUtCURTH8eszSGgIgkqSoHBQh7QpbAlBcRCJ2staHFoa+hNyzqXBoan+gMDdoWgymkwkBxMiggo3a3Cp76WfcJHXgQ/nvfveue+ewwt08luGmEEdcwgjZP7iFrtmIqaUn5SXkUEDA+wZn/CwgQgetHYjC+JbZCOANWf9VXmobDd+c4vu8YgoalhFFpf4VL8rmMW8vR/3lEQV2yijhUO99KzeQ7p+95wjneAMQcRQ1JfsNA/wrc1T46KaznyMJqZxrcIvdNRf3957Gm8JO0ggjRx+cKpN21h0B7GJDw3EOGPvYuQ3ctvgC+K4w7nOfoQlFP4rsg+usI4Lrff0Z7QnCyqpffMrwAC15jTuOMaeqQAAAABJRU5ErkJggg==")
@@ -356,7 +363,7 @@
     /*background-image:*/
 /*}*/
 
-.social-likes__button_vkontakte {
+.social-likes__button_vkontakte, .social-likes__button_facebook, .social-likes__button_twitter {
     line-height: normal;
     padding: 0;
 }
@@ -364,7 +371,7 @@
     border-radius: 5px;
     background: #e6eef9;
     color :#0f59c9;
-    padding:5px 40px 5px 5px;
+    padding:5px 31px 5px 5px;
     border: 0;
     margin: 0;
     min-width: 81px;
@@ -375,12 +382,69 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     height: 40px;
+    margin-left: 17px;
+}
+.social-likes__widget_facebook {
+    border-radius: 5px;
+    background: #e6f4fc;
+    color :#0f59c9;
+    padding:5px 31px 5px 5px;
+    border: 0;
+    margin: 0;
+    margin-left: 17px;
+    min-width: 81px;
+    -webkit-box-sizing: padding-box;
+    -moz-box-sizing: padding-box;
+    box-sizing: padding-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 40px;
+}
+.social-likes__widget_facebook:hover:after{
+    background: #008ae2;
+    color:#fff;
+}
+.social-likes__widget_twitter {
+    border-radius: 5px;
+    background: #ecf7fc;
+    color :#3aaae1;
+    padding:5px 31px 5px 5px;
+    border: 0;
+    margin: 0;
+    min-width: 81px;
+    -webkit-box-sizing: padding-box;
+    -moz-box-sizing: padding-box;
+    box-sizing: padding-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 40px;
+    margin-left: 17px;
+}
+.social-likes__widget_twitter:hover:after{
+    background: #3aaae1;
+    color:#fff;
 }
 .social-likes__icon_vkontakte {
     width: 40px;
     line-height: inherit;
     height: 40px;
     background: #004ec6 url("../images/icon/icon-vk.png") 50% 50% no-repeat;
+    margin: -5px 10px -5px -5px;
+    border-radius: 5px 0 0 5px;
+    display: block;
+    position: relative;
+}
+.social-likes__widget_vkontakte:hover:after{
+    background: #004ec6;
+    color:#fff;
+}
+.social-likes__icon_twitter {
+    width: 40px;
+    line-height: inherit;
+    height: 40px;
+    background: #3aaae1 url("../images/icon/icon-twitter.png") 50% 50% no-repeat;
     margin: -5px 10px -5px -5px;
     border-radius: 5px 0 0 5px;
     display: block;

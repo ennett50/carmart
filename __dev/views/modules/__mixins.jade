@@ -119,11 +119,11 @@ mixin sliderList(title, params)
 							a(href="#").button В корзину
 
 
-mixin breadcrumbstBlog(brArray, sep, wrap)
+mixin breadcrumbsSimple(brArray, sep, wrap)
 	-if( !sep )
 		-sep = ''
 	-var counter = 0
-	.breadcrumbs-blog
+	.breadcrumbs
 		-if( wrap === true )
 			-wrap = [ '<div class="breadcrumbs-wrapper wrapper-content">', '</div>' ]
 		-else

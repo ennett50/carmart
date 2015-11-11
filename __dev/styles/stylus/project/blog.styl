@@ -1,2 +1,58 @@
-.breadcrumbs-blog
-	font-size 11px
+.blog
+	position relative
+	&-header
+		text-align center
+		margin 0 -108px 62px
+		position relative
+		&-ctn
+			position absolute
+			bottom 0
+			text-align left
+			left 0
+			width 100%
+			border-box()
+
+			padding 0 108px 58px
+			z-index 1
+	&-btns
+		position absolute
+		top 30px
+		right 131px
+		.social-likes
+			display inline-block
+			vertical-align middle
+	&-copy-link
+		height 40px
+		line-height 40px
+		width 128px
+		margin-left 17px
+		border-radius 5px
+		text-decoration none
+		background #ecf7fc
+		display inline-block
+		vertical-align middle
+		color #848d9a
+		font-size 12px
+		trans()
+		&:hover
+			opacity 0.75
+	&-date
+		display inline-block
+		vertical-align bottom
+		font-style italic
+		color #c0c6cd
+		font-size 15px
+		font-weight 300
+		margin-right 55px
+		span
+			color #848d9a
+	&-tags
+		display inline-block
+		vertical-align bottom
+		font-style italic
+		color #535a66
+		font-size 12px
+		letter-spacing: -0.5px;
+		font-weight 300
+		span
+			font-weight normal
