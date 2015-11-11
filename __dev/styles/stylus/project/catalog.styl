@@ -141,16 +141,16 @@
 		line-height: normal;
 		letter-spacing: -0.5px;
 		font-size 15px
-	&-title
+	&-title, p&-title, .text p&-title
 		font-size 20px
 		font-weight 900
-		margin-bottom 10px
+		margin-bottom 7px
 		letter-spacing: -0.5px;
 		_text-overflow(100%)
 	&-detail
 		float left
 		position: relative;
-		top: 56px;
+		top: 49px;
 		@media screen and (max-width 1350px)
 			display none
 		&-icon
@@ -161,6 +161,7 @@
 			opacity 0.5
 			cursor pointer
 			trans()
+
 			&:hover
 				opacity 1
 				& + .catalog-detail-hint
@@ -181,7 +182,7 @@
 			width: 139px;
 			line-height: normal;
 			opacity 0
-			padding-top: 30px;
+			padding-top: 20px;
 			trans()
 			p
 				font-size: 12px;
@@ -205,14 +206,14 @@
 		&-normal
 			color #10aa8b
 			font-size 15px
-			margin-bottom 5px
+			margin-bottom 0
 			line-height normal
 		&-credit
 			line-height normal
 			letter-spacing: -0.8px;
 			b
 				font-size 20px
-			margin-bottom 10px
+			margin-bottom 7px
 	&-btns
 		position relative
 		text-align center
