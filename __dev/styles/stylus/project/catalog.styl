@@ -36,6 +36,10 @@
 		&-gallery
 			height 208px
 			position relative
+			li
+				list-style none
+				margin 0
+				padding 0
 		&-slider
 			li
 				border-radius 4px 4px 0 0
@@ -132,20 +136,21 @@
 			&.__active
 				&:before
 					sprite($s-icon-favorite-hover)
-	p
+	p, .text & p
 		margin-bottom: 8px;
 		line-height: normal;
 		letter-spacing: -0.5px;
-	&-title
+		font-size 15px
+	&-title, p&-title, .text p&-title
 		font-size 20px
 		font-weight 900
-		margin-bottom 10px
+		margin-bottom 7px
 		letter-spacing: -0.5px;
 		_text-overflow(100%)
 	&-detail
 		float left
 		position: relative;
-		top: 48px;
+		top: 49px;
 		@media screen and (max-width 1350px)
 			display none
 		&-icon
@@ -156,6 +161,7 @@
 			opacity 0.5
 			cursor pointer
 			trans()
+
 			&:hover
 				opacity 1
 				& + .catalog-detail-hint
@@ -179,27 +185,35 @@
 			padding-top: 20px;
 			trans()
 			p
+				font-size: 12px;
+				line-height normal
 				margin-bottom: 3px;
 				white-space nowrap
 				letter-spacing: -0.55px;
+
+
 	&-price
 		float right
 		text-align right
 		margin-top: -25px;
+		line-height normal
 
 		&-rf
+			line-height normal
 			color #a1adbb
 			font-size 12px
 			margin-bottom 5px
 		&-normal
 			color #10aa8b
 			font-size 15px
-			margin-bottom 5px
+			margin-bottom 0
+			line-height normal
 		&-credit
+			line-height normal
 			letter-spacing: -0.8px;
 			b
 				font-size 20px
-			margin-bottom 10px
+			margin-bottom 7px
 	&-btns
 		position relative
 		text-align center

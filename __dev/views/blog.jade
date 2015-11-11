@@ -9,10 +9,7 @@ block block-content
 	.blog
 		div.blog-header
 			div.blog-btns
-				.social-likes
-					.facebook(title='Поделиться ссылкой на Фейсбуке')
-					.vkontakte(title='Поделиться ссылкой во Вконтакте')
-					.twitter(title='Поделиться ссылкой в Твиттере')
+				include modules/social-likes
 				!='\n'
 				a(href="#").blog-copy-link Скопировать ссылку
 
@@ -23,8 +20,15 @@ block block-content
 				div.blog-tags <span>tags:</span> полезные советы, в дорогу, кармарт рекомендует
 
 
-		div.text
+		div.text.sign
+			div.sign-text
+				p.sign-text-title Концентрация внимания
+				p Если вы только начали чувствовать сонливость, можно взбодриться, сконцентрировав внимание. При этом лучше принять правильную позу при посадке (чуть выпрямить спинку сиденья, расположить руки на руле в положении «без пятнадцати три»).
+
+
+
 			div.text-column
+
 				p Впереди выходные и, возможно, вы решите куда-то поехать, и возможно, куда-то далеко. А долгие поездки нередко вызывают у нас сонливость.
 				p Существует несколько способов, которые помогут на некоторое время взбодриться и без эксцессов закончить путешествие.
 
@@ -49,40 +53,142 @@ block block-content
 					b <span class="font-red">Тонизирующие напитки</span>
 					br
 					| Действие многих «энергетиков» основано на том же кофеине с добавлением различных «присадок»: экстракта гуараны, таурина, различных витаминов и полезных кислот. <span class="font-red">Не стоит забывать, что энергетические напитки очень вредны для здоровья</span>, даже производители таких товаров предупреждают о том, что больше трех порций в сутки пить не рекомендуется. Ну, а мы и вовсе рекомендуем воздержаться. Оставьте их на план «Б».
-			div.text-video.align-left.icon-play
+			div.text-video.align-left.icon-play.sign
 				a(href="#video-content").js-fancybox
 					img(src="images/example/video.png" alt="")
-
+				div.sign-video Система контроля сна для водителя <b>«Driver Drowsiness Detection System 2.0»</b>
 
 				div#video-content.hidden
 					object(type='application/x-shockwave-flash', data='images/player/player_flv_multi.swf', width='1081', height='540')
 						param(name='movie', value='images/player/player_flv_multi.swf')
 						param(name='allowFullScreen', value='true')
 						param(name='FlashVars', value='flv=video_test.flv&startimage=images/player/video.png&showtime=1&width=1081&height=540&volume=200&autonext=0&margin=0&bgcolor1=ffffff&bgcolor2=ffffff&showstop=1&showvolume=1&showopen=0&showplayer=always&showfullscreen=1&playercolor=10aa8b&loadingcolor=ffffff&buttonovercolor=396159&slidercolor1=ffffff&slidercolor2=ffffff&sliderovercolor=396159&buffermessage=Загружается _n_&ondoubleclick=fullscreen&iconplaybgcolor=ffffff&videobgcolor=ffffff')
-			div.text-column
-				p
-					b Кофе
-					br
-					|
+			div.text-column.sign
+				div.sign-car
+					div.sign-car-title В этом автомобиле не уснуть
+					div.sign-car-desc Представляем вашему вниманию новейшую разработку корейских ученых - <a href="#">Hyundai Veloster</a>.<br/>Автомобиль с лучшими электронными сигнализаторами усталости третьего поколения.
+
+					.catalog-item
+						.catalog-item-gallery
+							-var i = 2
+							ul.js-catalog-slider.catalog-item-slider
+								-for (i;i<4;i++)
+									li
+										img(src="images/example/car/#{i}.png" alt="")
+						.catalog-item-ctn
+							.catalog-item-btns
+								.catalog-item-compare
+								.catalog-item-favorite.__active
+								.catalog-item-hint-btns
+									a.catalog-item-hint.__favorite.__active(href='#')  Убрать из избранного
+									a.catalog-item-hint.__compare(href='#') К сравнению
+							p.catalog-title Ford Mondeo
+							p 186 л.с. (2.0 EcoPower) АИ-95: 10л / 15л
+							p
+								b 2015
+								|  г.в.
+							p
+								b 2 000
+								|  км
+							.catalog-detail
+								.catalog-detail-icon.__gasoline
+								.catalog-detail-hint
+									p
+										b Расход бензина АИ-92
+									p
+										b трасса:
+										|  6 л/100км
+									p
+										b город:
+										|  7.5 л/100км
+									p
+										b смешаный цикл:
+										|  6.5 л/100км
+								.catalog-detail-icon.__compressor
+								.catalog-detail-hint
+									p
+										b Расход бензина АИ-92
+									p
+										b трасса:
+										|  16 л/100км
+									p
+										b город:
+										|  7.5 л/100км
+									p
+										b смешаный цикл:
+										|  61.5 л/100км
+							.catalog-price
+								.catalog-price-rf
+									| Цена РФ
+									span.__through 1 170 000 Р
+								.catalog-price-normal 1 000 000 Р
+								.catalog-price-credit
+									| от
+									b 15 000 Р/мес.
+								a.button-detail(href='#') Купить
+							.clear
+
 
 				p
-					b Кофе
+					b Энергетические таблетки
 					br
-					|
-				p
-					b Кофе
-					br
-					|
+					| Они отличаются от напитков, в первую очередь, агрегатным состоянием. В основе их составов те же кофеин, таурин, витамины. Их плюс в маленьком объёме – упаковка всегда может лежать в машине и не занимать места – и в способе употребления – за рулём не всегда удобно пить из банки, особенно если нет подстаканников. Не забывайте соблюдать инструкции по приему. Было время, я писал диплом, и кофеин в таблетках меня очень выручал. Но, конечно, здоровья эти таблетки не прибавляют
 
 				p
-					b Кофе
+					b Еда
 					br
-					|
+					| Многие дальнобойщики берут с собой в дорогу какую-то незначительную еду: сухарики, семечки, орешки, маленькие конфетки (желательно с ярким вкусом). Их потребление позволяет несколько отвлечься от монотонной дороги, дополнительные задачи делают деятельность организма более активной.
 				p
-					b Кофе
+					b Электронные сигнализаторы усталости
 					br
-					|
+					| <a href="#">На некоторых современных автомобилях</a> есть системы, которые по изменению манеры движения и управления автомобилем, а также по показаниям датчиков, следящих за поведением глаз, могут предупредить водителя о его усталости и предложить передохнуть. Внешне такие приборы похожи на гарнитуру Bluetooth. Они считывают движения головы, и, если вы начинаете клевать носом, издают резкий звук.
+
 				p
+					b Концентрация внимания
+					br
+					| Если вы только начали чувствовать сонливость, можно взбодриться, сконцентрировав внимание. При этом лучше принять правильную позу при посадке (чуть выпрямить спинку сиденья, расположить руки на руле в положении «без пятнадцати три»). Старайтесь осознанно воспринимать всю дорожную информацию, ставьте перед собой различные задачи (считать столбы или знаки, определять марки встречных машин и т.п.) Но не стоит концентрироваться на каком-то одном элементе (например, на «убегающей» линии разметки) – это может убаюкать. Концентрация на мелочах сбивает монотонность движения по трассе.
+
+				p
+					b Изменение физического состояния
+					br
+					| Любое изменение физического состояния делает человека бодрее. Способы есть весьма различные, например, физические упражнения: напрягайте и расслабляйте различные мышцы. Можно потрясти головой, как при пробуждении.
+				p.italic Ну, и самый главный, бонусный, совет, или даже не совет, а просто напоминание. <span class="font-green">Самое лучшее средство от сна — это сон.</span> Если вдруг чувствуете, что начинаете клевать, просто остановитесь и вздремните часок-другой, — это самый безопасный вариант.
+
+				p.font-normal Удачи вам на дороге и хороших выходных!
+		div.blog-info
+			div.blog-info-item 12 октября 2015
+			div.blog-info-item просмотров: 129 899
+		div.blog-btn-bottom
+			include modules/social-likes
+			!='\n'
+			a(href="#").blog-copy-link Скопировать ссылку
+
+		div.other-articles
+			div.other-articles-title Смотрите так же
+			div.other-articles-ctn
+				div.other-articles-item
+					a(href="#").other-articles-link
+						div.other-articles-preview Наш тест-драйв с известным блогером Васей Васечкиным
+						div.other-articles-name Тест-драйв Ford Explorer 2015
+						div.other-articles-info
+							div.other-articles-date 12 октября 2015
+							div.other-articles-watches просмотров: 129 899
+				div.other-articles-item
+					a(href="#").other-articles-link
+						div.other-articles-preview Простые советы от carmart для лучшего результата
+						div.other-articles-name Как подготовить автомобиль к продаже?
+						div.other-articles-info
+							div.other-articles-date 12 октября 2015
+							div.other-articles-watches просмотров: 129 899
+				div.clear
+
+		div.blog-header.__other-style
+			a(href="#").blog-link-detail Читать статью
+			img(src="images/example/reviews/2.png", alt=" ")
+			div.blog-header-ctn
+				a(href="#").title-h1 Как не уснуть за рулём в долгом путешествии?
+				div.blog-date опубликовано <span>25 октября 2015</span>
+				div.blog-tags <span>tags:</span> полезные советы, в дорогу, кармарт рекомендует
 
 
 

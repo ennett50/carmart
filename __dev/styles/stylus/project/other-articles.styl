@@ -1,0 +1,63 @@
+.other-articles
+	position relative
+	border-top 1px solid #e5e9ee
+	border-bottom 1px solid #e5e9ee
+	padding 25px 0
+	max-width 600px
+	margin 0 auto 60px
+	&:after
+		content ''
+		clear both
+		display block
+	&-title
+		position absolute
+		top: -8px;
+		background #fff
+		padding 0 10px
+		border-box()
+		width 110px
+		left 50%
+		margin-left -50px
+		font-size 12px
+		color #07aa8a
+		letter-spacing -0.5px
+	&-ctn
+		position relative
+	&-item
+		float right
+		width 245px
+		text-decoration none
+		color #c0c6cd
+		font-size 12px
+		&:first-child
+			float left
+	&-link
+		text-decoration none
+		display inline-block
+		&:hover
+			.other-articles-preview
+				color #535a66
+			.other-articles-name
+				color #07aa8a
+	&-preview
+		letter-spacing -0.5px
+		margin-bottom 12px
+		font-weight 300
+		line-height normal
+		trans()
+	&-name
+		font-weight bold
+		font-size 15px
+		margin-bottom: 10px;
+		min-height: 30px;
+		color #535a66
+		trans()
+		letter-spacing: -0.5px;
+	&-info
+		position relative
+		&:after
+			clear()
+	&-date
+		float left
+	&-watches
+		float right
