@@ -39,16 +39,27 @@
 			width auto
 			padding-top: 14px;
 	&-car
+		&-info
+			position relative
+
 		position absolute
 		right -370px
 		width 340px
-		@media screen and (max-width 1350px)
-			display none
+		@media screen and (max-width: 1330px)
+			display block
+			right 0
+			top 0
+			position relative
+			width auto
+			padding-top: 14px;
+
 		.catalog-item
 			line-height: normal;
 			width 340px
 			margin-left 0
 			margin-right 0
+			@media screen and (max-width 1350px)
+				display none
 
 			p
 				margin-bottom: 8px;
@@ -81,6 +92,8 @@
 			line-height 18px
 			max-width: 230px;
 			margin-bottom: 22px;
+			@media screen and (max-width 1350px)
+				max-width inherit
 			a
 				color #10aa8b
 

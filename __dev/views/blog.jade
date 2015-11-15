@@ -53,8 +53,8 @@ block block-content
 					b <span class="font-red">Тонизирующие напитки</span>
 					br
 					| Действие многих «энергетиков» основано на том же кофеине с добавлением различных «присадок»: экстракта гуараны, таурина, различных витаминов и полезных кислот. <span class="font-red">Не стоит забывать, что энергетические напитки очень вредны для здоровья</span>, даже производители таких товаров предупреждают о том, что больше трех порций в сутки пить не рекомендуется. Ну, а мы и вовсе рекомендуем воздержаться. Оставьте их на план «Б».
-			div.text-video.align-left.icon-play.sign
-				a(href="#video-content").js-fancybox
+			div.text-video.align-left.sign
+				a(href="#video-content").icon-play.js-fancybox
 					img(src="images/example/video.png" alt="")
 				div.sign-video Система контроля сна для водителя <b>«Driver Drowsiness Detection System 2.0»</b>
 
@@ -65,8 +65,9 @@ block block-content
 						param(name='FlashVars', value='flv=video_test.flv&startimage=images/player/video.png&showtime=1&width=1081&height=540&volume=200&autonext=0&margin=0&bgcolor1=ffffff&bgcolor2=ffffff&showstop=1&showvolume=1&showopen=0&showplayer=always&showfullscreen=1&playercolor=10aa8b&loadingcolor=ffffff&buttonovercolor=396159&slidercolor1=ffffff&slidercolor2=ffffff&sliderovercolor=396159&buffermessage=Загружается _n_&ondoubleclick=fullscreen&iconplaybgcolor=ffffff&videobgcolor=ffffff')
 			div.text-column.sign
 				div.sign-car
-					div.sign-car-title В этом автомобиле не уснуть
-					div.sign-car-desc Представляем вашему вниманию новейшую разработку корейских ученых - <a href="#">Hyundai Veloster</a>.<br/>Автомобиль с лучшими электронными сигнализаторами усталости третьего поколения.
+					.sign-car-info
+						div.sign-car-title В этом автомобиле не уснуть
+						div.sign-car-desc Представляем вашему вниманию новейшую разработку корейских ученых - <a href="#">Hyundai Veloster</a>.<br/>Автомобиль с лучшими электронными сигнализаторами усталости третьего поколения.
 
 					.catalog-item
 						.catalog-item-gallery
@@ -74,7 +75,8 @@ block block-content
 							ul.js-catalog-slider.catalog-item-slider
 								-for (i;i<4;i++)
 									li
-										img(src="images/example/car/#{i}.png" alt="")
+										a(href="#")
+											img(src="images/example/car/#{i}.png" alt="")
 						.catalog-item-ctn
 							.catalog-item-btns
 								.catalog-item-compare
@@ -82,7 +84,8 @@ block block-content
 								.catalog-item-hint-btns
 									a.catalog-item-hint.__favorite.__active(href='#')  Убрать из избранного
 									a.catalog-item-hint.__compare(href='#') К сравнению
-							p.catalog-title Ford Mondeo
+							p.catalog-title
+								a(href="#") Ford Mondeo
 							p 186 л.с. (2.0 EcoPower) АИ-95: 10л / 15л
 							p
 								b 2015
