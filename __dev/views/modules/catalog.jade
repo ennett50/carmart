@@ -58,7 +58,8 @@ div.catalog
 					ul.js-catalog-slider.catalog-item-slider
 						-for (i;i<4;i++)
 							li
-								img(src="images/example/car/#{i}.png" alt="")
+								a(href="#")
+									img(src="images/example/car/#{i}.png" alt="")
 				div.catalog-item-ctn
 					div.catalog-item-btns
 
@@ -82,7 +83,8 @@ div.catalog
 									a(href="#").catalog-item-hint.__compare К сравнению
 
 
-					p.catalog-title!= item.title
+					p.catalog-title
+						a(href="#")!= item.title
 					p!= item.desc
 					p!= item.year
 					p!= item.footage
