@@ -180,6 +180,22 @@ main
 	overflow: hidden;
 	.content
 		margin-left 140px
+.main-column-info
+	float left
+	width 735px
+	position relative
+	z-index 1
+	h1
+		margin-bottom 35px
+		font-size 36px
+.right-column-info
+	width 100%
+	margin-left -735px
+	position relative
+	float right
+	overflow: hidden;
+	.content
+		margin-left 777px
 .hint-price
 	color #fff
 	position absolute
@@ -218,7 +234,6 @@ main
 			transform: scale(0.93);
 		&:after
 			animation: sonarEffect 1.3s ease-out 75ms;
-
 	&:before
 		content ''
 		display block
@@ -239,3 +254,54 @@ main
 		left: 50%;
 		border-radius: 50%;
 		border-box()
+.tab
+	position relative
+	input[type="radio"]:checked + label
+		color #00a086
+		border-color #00a086
+		cursor default
+		span:not(.card-config-count-reviews)
+			color #00a086
+	&-title
+		font-size 12px
+		font-weight bold
+		cursor pointer
+		display inline-block
+		vertical-align top
+		padding 10px 23px
+		border-bottom 2px solid #dfe3e6
+		color #4f5a67
+		text-transform uppercase
+		text-align center
+		margin-right -4px
+		height 47px
+		min-width 112px
+		border-box()
+		trans()
+		position relative
+		&:hover
+			color #00a086
+			border-color #00a086
+			span:not(.card-config-count-reviews)
+				color #00a086
+
+
+		span
+			display block
+			font-size 10px
+			color #848d9a
+			margin-top 4px
+	&-relative
+		position relative
+		display inline-block
+	&-ctn
+		display none
+		padding-top 54px
+.tab input[type="radio"]:checked:nth-of-type(1):checked ~ .tab-ctn:nth-of-type(1)
+	display block
+.tab input[type="radio"]:checked:nth-of-type(2):checked ~ .tab-ctn:nth-of-type(2)
+	display block
+.tab input[type="radio"]:checked:nth-of-type(3):checked ~ .tab-ctn:nth-of-type(3)
+	display block
+.tab input[type="radio"]:checked:nth-of-type(4):checked ~ .tab-ctn:nth-of-type(4)
+	display block

@@ -1,0 +1,70 @@
+.card-info
+	position relative
+	margin-bottom 60px
+	&-hidden-desc
+		opacity 0
+		visibility hidden
+		trans()
+		position absolute
+		top 0
+		left 0
+		border-box()
+		width 100%
+		height 100%
+		background #fffee9
+		padding 30px 5px 5px
+		p
+			margin-bottom 13px
+	&-item
+		display inline-block
+		vertical-align top
+		position relative
+		color #848d9a
+		margin-left 36px
+		font-size 12px
+		line-height: normal;
+		width 152px
+		min-height 152px
+		text-align center
+		&:first-child
+			margin-left 0
+		&:hover
+			.card-info-hidden-desc
+				opacity 1
+				visibility visible
+
+	&-icon
+		height 52px
+		width 100%
+		margin-bottom 10px
+
+		position relative
+		&:before
+			display inline-block
+			content ''
+			position absolute
+			bottom 0
+			left 50%
+		&.__gasoline
+			&:before
+				sprite($s-icon-gasoline-vin)
+				margin-left -23px
+		&.__compressor
+			&:before
+				sprite($s-icon-compressor-vin)
+				margin-left -27px
+		&.__reliability
+			&:before
+				sprite($s-icon-reliability-vin)
+				margin-left -20px
+		&.__pay
+			&:before
+				sprite($s-icon-pay-vin)
+				margin-left -28px
+	&-title
+		font-weight bold
+		font-size 15px
+		line-height normal
+		color #4f5a67
+		margin-bottom 15px
+

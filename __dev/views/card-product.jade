@@ -1,0 +1,89 @@
+extends layouts/_default
+block vars
+	-var currentPageTitle = "X9FNXXFFDN4R22189"
+	-var oneColumn = "true"
+block title
+	title=currentPageTitle
+block block-content
+	+breadcrumbsSimple(["Главная","Ford ", "все ford mondeo 2015", "X9FNXXFFDN4R22189"], "/")
+	div.main-column-info.card-product
+		h1 Ford Mondeo Titanium 2.0 AT 130 л.с.
+
+		div.card-product-gallery
+			-var i = 1
+			ul.js-catalog-slider
+				-for (i;i<3;i++)
+					li
+						img(src="images/example/vin/#{i}.png" alt="")
+
+		div.card-info
+			div.card-info-item
+				div.card-info-icon.__gasoline
+				div.card-info-title Расход
+				div.card-info-desc 9 л на трассе, <br/>11 л в городе,<br/>8 л смешанный цикл
+				div.card-info-hidden-desc
+					div.card-info-title Расход
+					p Гарантируем возврат средств за автомобиль.
+					p В течении 10 дней.
+			div.card-info-item
+				div.card-info-icon.__compressor
+				div.card-info-title Turbo Economy
+				div.card-info-desc Расходуйте бензин <br/>в нужный момент
+				div.card-info-hidden-desc
+					div.card-info-title Turbo Economy
+					p Гарантируем возврат средств за автомобиль.
+					p В течении 10 дней.
+			div.card-info-item
+				div.card-info-icon.__reliability
+				div.card-info-title 3 года гарантии
+				div.card-info-desc Потому что мы - “Максимум”
+				div.card-info-hidden-desc
+					div.card-info-title 3 года гарантии
+					p Гарантируем возврат средств за автомобиль.
+					p В течении 10 дней.
+			div.card-info-item
+				div.card-info-icon.__pay
+				div.card-info-title Возврат денег
+				div.card-info-desc В течение <br/>10 дней
+				div.card-info-hidden-desc
+					div.card-info-title Возврат денег
+					p Гарантируем возврат средств за автомобиль.
+					p В течении 10 дней.
+
+		div.card-config
+			div.card-config-nav.tab
+				input(type="radio" name="card-config" checked="" id="config").hidden
+				label.tab-title(for="config") Характеристики
+
+				input(type="radio" name="card-config" id="options").hidden
+				label.tab-title(for="options")
+					| Опции
+					span 165 установлено
+
+				input(type="radio" name="card-config" id="additional").hidden
+				label.tab-title(for="additional")
+					|Выберите дополнительное оборудование
+					span 780 доступно
+
+
+				input(type="radio" name="card-config" id="reviews").hidden
+				label.tab-title(for="reviews")
+					div.tab-relative
+						| Отзывы
+						span.card-config-count-reviews 8
+					span stars
+
+
+				div.tab-ctn 1
+				div.tab-ctn 2
+				div.tab-ctn 3
+				div.tab-ctn 4
+
+
+
+
+
+	div.right-column-info
+		div.content
+			p 21
+	div.clear
