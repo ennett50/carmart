@@ -14,7 +14,14 @@ block block-content
 			ul.js-catalog-slider
 				-for (i;i<3;i++)
 					li
-						img(src="images/example/vin/#{i}.png" alt="")
+						a(href="#video-content").icon-play.js-fancybox
+							img(src="images/example/vin/#{i}.png" alt="")
+						div#video-content.hidden
+							object(type='application/x-shockwave-flash', data='images/player/player_flv_multi.swf', width='1081', height='540')
+								param(name='movie', value='images/player/player_flv_multi.swf')
+								param(name='allowFullScreen', value='true')
+								param(name='FlashVars', value='flv=video_test.flv&startimage=images/player/video.png&showtime=1&width=1081&height=540&volume=200&autonext=0&margin=0&bgcolor1=ffffff&bgcolor2=ffffff&showstop=1&showvolume=1&showopen=0&showplayer=always&showfullscreen=1&playercolor=10aa8b&loadingcolor=ffffff&buttonovercolor=396159&slidercolor1=ffffff&slidercolor2=ffffff&sliderovercolor=396159&buffermessage=Загружается _n_&ondoubleclick=fullscreen&iconplaybgcolor=ffffff&videobgcolor=ffffff')
+
 
 		div.card-info
 			div.card-info-item
@@ -72,9 +79,67 @@ block block-content
 						| Отзывы
 						span.card-config-count-reviews 8
 					span stars
+				div.tab-ctn.text
+					div.left
+						h2 Обзор
+						table
+							tr
+								td VIN
+								td X9FNXXFFDN4R22189
+							tr
+								td Тип кузова
+								td Седан
+							tr
+								td Цвет
+								td Синий <span class="card-product-colo __blue"></span>
+							tr
+								td Тип КПП
+								td Автоматическая
+							tr
+								td Привод
+								td Передний
+							tr
+								td Салон
+								td Комбинированный
+					div.right
+						h2 Двигатель
+
+						table
+							tr
+								td Тип двигателя
+								td Бензин турбо
+							tr
+								td Объем двигателя
+								td 2.0
+							tr
+								td Мощность, л.с.
+								td 240 л.с.
+							tr
+								td Тяга
+								td 240 Н/м
+							tr
+								td Топливный бак
+								td 47 л (~ на 600км)
+							tr
+								td Топливо
+								td АИ-95
+					div.clear
+
+					h2 Основные опции&nbsp;
+						span (примечание для разработки: те, которые покупатель выбирал в фильтре)
 
 
-				div.tab-ctn 1
+					p Система стабилизации курсовой устойчивости ESP
+					p Антиблокировочная система тормозов ABS
+					p Фронтальные подушки безопасности для водителя и переднего пассажира
+					p Боковые подушки безопасности для водителя и переднего пассажира
+					p Подушка безопасности для коленей водителя
+					p Боковые шторки безопасности
+					p Крепления для детских кресел ISOFIX
+					p Запасное колесо
+					p Иммобилайзер
+
+
 				div.tab-ctn 2
 				div.tab-ctn 3
 				div.tab-ctn 4
@@ -83,7 +148,159 @@ block block-content
 
 
 
+
+
+
 	div.right-column-info
 		div.content
-			p 21
-	div.clear
+			div.card-product-btns
+				a(href="#" target="_blank").card-product-links
+					span.card-product-btns-icon.__save
+					|Сохранить
+				a(href="#" ).card-product-links
+					span.card-product-btns-icon.__compare
+					|Сравнить
+				a(href="#" ).card-product-links.__active
+					span.card-product-btns-icon.__favorite
+					|Избранное
+					span.card-product-links-stats В избранном у 7 человек
+				a(href="#" ).card-product-links
+					span.card-product-btns-icon.__follow
+					|Поделиться
+			div.card-product-rfprice цена в РФ <b class="__through">1 100 000 Р</b>
+			div.card-product-price
+				div.card-product-price-info
+					div.card-product-current-price 1 000 000 Р
+					div.card-product-credit от&nbsp;
+						a(href="#") <b>21 000</b>
+						| &nbspР/мес.
+			div.card-product-economy Вы сэкономите до <b>250 000 Р</b>
+	div.clear(style="clear:both")
+
+	div.title-h1.__normal С этим товаром покупают
+	div.catalog
+		-var catalog = []
+		-catalog[0] = {}
+		//--catalog[0].hint_price = '<b>800 000 Р</b> до 18.10.2015'
+		//--catalog[0].old_car = 'true'
+		//-catalog[0].in_compare = 'true'
+		-catalog[0].title = 'Dunlop SP Sport Maxx TT (4 шт.)'
+		-catalog[0].desc = '225/40 R18'
+		-catalog[0].year = 'ЗИМА БЕЗ ШИПОВ'
+		//--catalog[0].footage = '<b>10 000</b> км'
+		//-catalog[0].price_rf = 'Цена РФ <span class="__through">1 570 000 </span>'
+		-catalog[0].price = '50 000 Р'
+		//-catalog[0].credit = 'от <b>10 000 Р/мес.</b>'
+
+
+		-for (var j =0; j<4;j++)
+			-each item, index in catalog
+				div.catalog-item
+					div.catalog-item-gallery
+						if (item.hint_price)
+							div.hint-price(class="#{item.hint_price_small ? '__small' : ''}")!= item.hint_price
+						if (item.old_car)
+							div.icon-mustache
+
+						-var i = index == 0 ? 1 : index == 1 ? 2 : 3
+						ul.js-catalog-slider.catalog-item-slider
+							li
+								a(href="#")
+									img(src="images/example/vin/3.png" alt="")
+					div.catalog-item-ctn
+						div.catalog-item-btns
+
+							if (item.in_compare)
+								div.catalog-item-compare.__active
+								div.catalog-item-favorite
+								div.catalog-item-hint-btns
+									a(href="#").catalog-item-hint.__favorite  В избранное
+									a(href="#").catalog-item-hint.__compare.__active  Не сравнивать
+							else if (item.in_favorite)
+								div.catalog-item-compare
+								div.catalog-item-favorite.__active
+								div.catalog-item-hint-btns
+									a(href="#").catalog-item-hint.__favorite.__active  Убрать из избранного
+									a(href="#").catalog-item-hint.__compare К сравнению
+							else
+								div.catalog-item-compare
+								div.catalog-item-favorite
+								div.catalog-item-hint-btns
+									a(href="#").catalog-item-hint.__favorite В избранное
+									a(href="#").catalog-item-hint.__compare К сравнению
+
+
+						p.catalog-title
+							a(href="#")!= item.title
+						p!= item.desc
+						p!= item.year
+						p!= item.footage
+
+
+						if (item.two)
+							div.catalog-detail
+								div.catalog-detail-icon.__gasoline
+								div.catalog-detail-hint
+									p
+										b Расход бензина АИ-92
+									p <b>трасса:</b> 6 л/100км
+									p <b>город:</b> 7.5 л/100км
+									p <b>смешаный цикл:</b> 6.5 л/100км
+
+								div.catalog-detail-icon.__compressor
+								div.catalog-detail-hint
+									p
+										b Расход бензина АИ-92
+									p <b>трасса:</b> 16 л/100км
+									p <b>город:</b> 7.5 л/100км
+									p <b>смешаный цикл:</b> 61.5 л/100км
+						else if(item.one)
+							div.catalog-detail
+								div.catalog-detail-icon.__reliability
+								div.catalog-detail-hint
+									p
+										b Расход бензина АИ-92
+									p <b>трасса:</b> 3 л/100км
+									p <b>город:</b> 5 л/100км
+									p <b>смешаный цикл:</b> 4 л/100км
+						else
+							div.catalog-detail(style="top:16px")
+								div.catalog-detail-icon.__gasoline
+								div.catalog-detail-hint
+									p
+										b Расход бензина АИ-92
+									p <b>трасса:</b> 6 л/100км
+									p <b>город:</b> 7.5 л/100км
+									p <b>смешаный цикл:</b> 6.5 л/100км
+
+								div.catalog-detail-icon.__compressor
+								div.catalog-detail-hint
+									p
+										b Расход бензина АИ-92
+									p <b>трасса:</b> 16 л/100км
+									p <b>город:</b> 7.5 л/100км
+									p <b>смешаный цикл:</b> 61.5 л/100км
+
+								div.catalog-detail-icon.__reliability
+								div.catalog-detail-hint
+									p
+										b Расход бензина АИ-92
+									p <b>трасса:</b> 3 л/100км
+									p <b>город:</b> 5 л/100км
+									p <b>смешаный цикл:</b> 4 л/100км
+
+						div.catalog-price
+							div.catalog-price-rf!= item.price_rf
+							div.catalog-price-normal!= item.price
+							div.catalog-price-credit!= item.credit
+
+							a(href="#").button-detail Купить
+
+
+						div.clear(style="clear:both")
+
+
+	div.banner
+		img(src="images/example/banner/1.png" alt=)
+	div.banner
+		img(src="images/example/banner/2.png" alt=)

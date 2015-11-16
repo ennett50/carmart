@@ -19,4 +19,155 @@
 		.bx-wrapper .bx-controls-direction a:hover
 			background: rgba(217, 212, 212, 0.5);
 
+	&-btns
+		position relative
+		border-bottom 1px solid #e5e9ee
+		margin-bottom 28px
+		text-align right
+		padding-bottom 14px
+		padding-right 13px
+		border-box()
 
+		&-icon
+			height 28px
+			margin-bottom 10px
+			position relative
+			display block
+			&:before
+				display block
+				content ''
+				position absolute
+				bottom 0
+				left 50%
+				margin-left -11px
+			&.__save
+				&:before
+					sprite($s-icon-save)
+
+			&.__compare
+				&:before
+					margin-left -13px
+					sprite($s-icon-compare-big)
+
+			&.__favorite
+				&:before
+					sprite($s-icon-favorite-big)
+
+			&.__follow
+				&:before
+					sprite($s-icon-follow)
+
+	&-links
+		display inline-block
+		vertical-align top
+		margin-left 62px
+		text-decoration none
+		text-align center
+		font-size 11px
+		position relative
+		color #bdc6ce
+		letter-spacing -0.5px
+		@media screen and (max-width:1265px)
+			margin-left 7%
+		&:first-child
+			margin-left 0
+
+		&-stats
+			display none
+			position absolute
+			left 50%
+			margin-left -42px
+			text-align center
+			color #535a66
+			font-size 10px
+			text-transform uppercase
+			width 88px
+			border-radius 4px
+			background #fafbfc
+			border-box()
+			font-weight bold
+			padding: 8px;
+			top: -50px;
+			line-height: 12px;
+		&.__active
+			.__save:before
+				sprite($s-icon-save-hover)
+		&.__active
+			.__compare:before
+				sprite($s-icon-compare-big-active)
+		&.__active
+			.__favorite:before
+				sprite($s-icon-favorite-big-active)
+			.card-product-links-stats
+				display block
+		&.__active
+			.__follow:before
+				sprite($s-icon-follow-hover)
+
+		&:hover
+			.__save, .__active
+				&:before
+					sprite($s-icon-save-hover)
+			.__compare, .__active
+				&:before
+					sprite($s-icon-compare-big-active)
+			.__favorite, .__active
+				&:before
+					sprite($s-icon-favorite-big-active)
+			.__follow, .__active
+				&:before
+					sprite($s-icon-follow-hover)
+
+
+	&-rfprice
+		text-align right
+		margin-bottom 23px
+		color #818e9c
+		font-style italic
+
+	&-price
+		text-align right
+		position relative
+		margin-bottom 38px
+		&-info
+			display inline-block
+			background #fffee9
+			color #4f5a67
+			font-size 24px
+			padding 8px 10px 8px 20px
+			position relative
+			border-radius 0 4px 4px 0
+			&:after
+				display block
+				content ''
+				sprite($s-icon-price-info)
+				position absolute
+				top -5px
+				left -90px
+	&-current-price
+			color #10aa8b
+			font-size 20px
+			font-weight bold
+			margin-bottom 5px
+
+	&-credit
+		position relative
+		&:before
+			position relative
+			display inline-block
+			content ''
+			vertical-align middle
+			margin-right 10px
+			sprite($s-icon-calc-bg)
+	&-economy
+		color #ff6262
+		text-align right
+		font-size 15px
+		margin-bottom 26px
+		b
+			font-size 20px
+	.text
+		font-size 15px
+		line-height normal
+		p, ul, ol, table
+			margin-bottom 18px
