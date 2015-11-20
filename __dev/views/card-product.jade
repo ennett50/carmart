@@ -175,59 +175,70 @@ block block-content
 						a(href="#") <b>21 000</b>
 						| &nbspР/мес.
 			div.card-product-economy Вы сэкономите до <b>250 000 Р</b>
-	div.clear(style="clear:both")
+			a(href="#").card-product-add
+				| Оформить заказ
+				span всего 5 минут
+			div.card-product-banks
+				img(src="images/banks.png" alt="")
+			div.card-product-info
+				div.card-product-info-item
+					div.card-product-info-text <b>Доставим бсплатно</b> по Санкт-Петербургу
+					div.card-product-info-value
+						span.psevdoLink Скажите куда
+					div.clear
+				div.card-product-info-item
+					div.card-product-info-text <b>ОСАГО в подарок</b> при оформлении КАСКО
+					div.card-product-info-value
+						span.icon-calc
+						span.psevdoLink Проверьте
+					div.clear
 
-	div.title-h1.__normal С этим товаром покупают
-	div.catalog
+			div.card-product-video
+				a(href="#video-content-order").js-fancybox.card-product-video-btn Как оформляют <b>заказ в Carmart</b>
+				div.card-product-video-desc Видео-доказательства заявленных возможностей первого интернет-магазина автомобилей Carmart.ru
+				div.card-product-video-duration длительность 2:45
+				div.card-product-video-watches 2 358
+
+				div#video-content-order.hidden
+					object(type='application/x-shockwave-flash', data='images/player/player_flv_multi.swf', width='1081', height='540')
+						param(name='movie', value='images/player/player_flv_multi.swf')
+						param(name='allowFullScreen', value='true')
+						param(name='FlashVars', value='flv=video_test.flv&startimage=images/player/video.png&showtime=1&width=1081&height=540&volume=200&autonext=0&margin=0&bgcolor1=ffffff&bgcolor2=ffffff&showstop=1&showvolume=1&showopen=0&showplayer=always&showfullscreen=1&playercolor=10aa8b&loadingcolor=ffffff&buttonovercolor=396159&slidercolor1=ffffff&slidercolor2=ffffff&sliderovercolor=396159&buffermessage=Загружается _n_&ondoubleclick=fullscreen&iconplaybgcolor=ffffff&videobgcolor=ffffff')
+
+
+
+	div.clear
+
+	div.title-h1.__normal С этим автомобилем покупают
+	div.catalog.__slider
 		-var catalog = []
 		-catalog[0] = {}
-		//--catalog[0].hint_price = '<b>800 000 Р</b> до 18.10.2015'
-		//--catalog[0].old_car = 'true'
-		//-catalog[0].in_compare = 'true'
-		-catalog[0].title = 'Dunlop SP Sport Maxx TT (4 шт.)'
-		-catalog[0].desc = '225/40 R18'
-		-catalog[0].year = 'ЗИМА БЕЗ ШИПОВ'
-		//--catalog[0].footage = '<b>10 000</b> км'
-		//-catalog[0].price_rf = 'Цена РФ <span class="__through">1 570 000 </span>'
-		-catalog[0].price = '50 000 Р'
-		//-catalog[0].credit = 'от <b>10 000 Р/мес.</b>'
+		-catalog[0].title = 'Dunlop SP Sport Maxx TT <span>(4 шт.)</span>'
+		-catalog[0].desc = '<b>225/40 R18</b>'
+		-catalog[0].year = '<b>ЗИМА</b> БЕЗ ШИПОВ'
+		-catalog[0].ok = 'true'
+		-catalog[0].price = '<b>50 000 Р</b>'
+
 
 
 		-for (var j =0; j<4;j++)
 			-each item, index in catalog
 				div.catalog-item
 					div.catalog-item-gallery
-						if (item.hint_price)
-							div.hint-price(class="#{item.hint_price_small ? '__small' : ''}")!= item.hint_price
-						if (item.old_car)
-							div.icon-mustache
+						if (item.ok)
+							div.icon-ok
 
 						-var i = index == 0 ? 1 : index == 1 ? 2 : 3
 						ul.js-catalog-slider.catalog-item-slider
 							li
 								a(href="#")
 									img(src="images/example/vin/3.png" alt="")
+
 					div.catalog-item-ctn
 						div.catalog-item-btns
-
-							if (item.in_compare)
-								div.catalog-item-compare.__active
-								div.catalog-item-favorite
-								div.catalog-item-hint-btns
-									a(href="#").catalog-item-hint.__favorite  В избранное
-									a(href="#").catalog-item-hint.__compare.__active  Не сравнивать
-							else if (item.in_favorite)
-								div.catalog-item-compare
-								div.catalog-item-favorite.__active
-								div.catalog-item-hint-btns
-									a(href="#").catalog-item-hint.__favorite.__active  Убрать из избранного
-									a(href="#").catalog-item-hint.__compare К сравнению
-							else
-								div.catalog-item-compare
-								div.catalog-item-favorite
-								div.catalog-item-hint-btns
-									a(href="#").catalog-item-hint.__favorite В избранное
-									a(href="#").catalog-item-hint.__compare К сравнению
+							div.catalog-item-favorite
+							div.catalog-item-hint-btns
+								a(href="#").catalog-item-hint.__favorite В избранное
 
 
 						p.catalog-title
@@ -237,57 +248,31 @@ block block-content
 						p!= item.footage
 
 
-						if (item.two)
-							div.catalog-detail
-								div.catalog-detail-icon.__gasoline
-								div.catalog-detail-hint
-									p
-										b Расход бензина АИ-92
-									p <b>трасса:</b> 6 л/100км
-									p <b>город:</b> 7.5 л/100км
-									p <b>смешаный цикл:</b> 6.5 л/100км
 
-								div.catalog-detail-icon.__compressor
-								div.catalog-detail-hint
-									p
-										b Расход бензина АИ-92
-									p <b>трасса:</b> 16 л/100км
-									p <b>город:</b> 7.5 л/100км
-									p <b>смешаный цикл:</b> 61.5 л/100км
-						else if(item.one)
-							div.catalog-detail
-								div.catalog-detail-icon.__reliability
-								div.catalog-detail-hint
-									p
-										b Расход бензина АИ-92
-									p <b>трасса:</b> 3 л/100км
-									p <b>город:</b> 5 л/100км
-									p <b>смешаный цикл:</b> 4 л/100км
-						else
-							div.catalog-detail(style="top:16px")
-								div.catalog-detail-icon.__gasoline
-								div.catalog-detail-hint
-									p
-										b Расход бензина АИ-92
-									p <b>трасса:</b> 6 л/100км
-									p <b>город:</b> 7.5 л/100км
-									p <b>смешаный цикл:</b> 6.5 л/100км
+						div.catalog-detail
+							div.catalog-detail-icon.__gasoline
+							div.catalog-detail-hint
+								p
+									b Расход бензина АИ-92
+								p <b>трасса:</b> 6 л/100км
+								p <b>город:</b> 7.5 л/100км
+								p <b>смешаный цикл:</b> 6.5 л/100км
 
-								div.catalog-detail-icon.__compressor
-								div.catalog-detail-hint
-									p
-										b Расход бензина АИ-92
-									p <b>трасса:</b> 16 л/100км
-									p <b>город:</b> 7.5 л/100км
-									p <b>смешаный цикл:</b> 61.5 л/100км
+							div.catalog-detail-icon.__compressor
+							div.catalog-detail-hint
+								p
+									b Расход бензина АИ-92
+								p <b>трасса:</b> 16 л/100км
+								p <b>город:</b> 7.5 л/100км
+								p <b>смешаный цикл:</b> 61.5 л/100км
 
-								div.catalog-detail-icon.__reliability
-								div.catalog-detail-hint
-									p
-										b Расход бензина АИ-92
-									p <b>трасса:</b> 3 л/100км
-									p <b>город:</b> 5 л/100км
-									p <b>смешаный цикл:</b> 4 л/100км
+							div.catalog-detail-icon.__reliability
+							div.catalog-detail-hint
+								p
+									b Расход бензина АИ-92
+								p <b>трасса:</b> 3 л/100км
+								p <b>город:</b> 5 л/100км
+								p <b>смешаный цикл:</b> 4 л/100км
 
 						div.catalog-price
 							div.catalog-price-rf!= item.price_rf
@@ -297,7 +282,7 @@ block block-content
 							a(href="#").button-detail Купить
 
 
-						div.clear(style="clear:both")
+						div.clear
 
 
 	div.banner

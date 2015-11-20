@@ -1,6 +1,17 @@
 .catalog
 	position relative
 	text-align center
+	&.__slider
+		text-align left
+		.catalog-item
+			width 340px
+			margin: 0 -5px 0 0;
+		.catalog-price
+			margin-top -14px
+		.catalog-detail
+			top 25px
+		.catalog-detail-hint
+			padding-top 3px
 	&-info, & p&-info
 		font-weight 700
 		font-size 18px
@@ -28,13 +39,13 @@
 			&:hover
 				color #00ac8b
 				background images("bg/bg-btn-info.png") no-repeat transparent
-		.icon-mustache
+		.icon-mustache, .icon-ok
 			position absolute
 			left 15px
 			bottom -17px
 			z-index 5
 		&-gallery
-			height 208px
+			height 210px
 			position relative
 			li
 				list-style none
@@ -44,7 +55,7 @@
 			li
 				border-radius 4px 4px 0 0
 				overflow hidden
-				content-center(100%, 208px)
+				content-center(100%, 210px)
 		&-ctn
 			position relative
 			padding 25px 18px 18px
@@ -151,6 +162,8 @@
 			text-decoration none
 		&:hover
 			text-decoration underline
+		span
+			font-weight normal
 	&-detail
 		float left
 		position: relative;
